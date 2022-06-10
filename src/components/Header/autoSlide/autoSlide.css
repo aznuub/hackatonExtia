@@ -1,0 +1,59 @@
+.chatBot {
+box-shadow: rgb(0 0 0 / 15%) 0px 15px 25px;
+background: white;
+border: 0px solid;
+border-radius: 50px;
+margin: auto;
+height: 90px;
+position: fixed;
+right: 24px;
+bottom: 24px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 12px;
+z-index: 4;
+}
+
+.cookie {
+  margin: 4px;
+  height: 90%;
+}
+
+.cookieText {
+  margin: 4px;
+  font-size: 1vmax;
+  color: #283D47;
+  font-family: Mont;
+}
+
+.btnSusyShow {
+  height: min(96px, 14vh);
+  margin-top: min(32px, 2vh);
+  display: block;
+  transform: translateX(-2px);
+}
+.btnSusy {
+  display: none;
+}
+.cookieStyleShow {
+  margin-top: min(74px, 3vh);
+  height: min(54px, 8vh);
+}
+
+.cookieStyle {
+  display: none;
+}
+
+.cookieButton {
+  margin: 4px;
+  font-size: 100%;
+  border-radius: 30px;
+  width: 74px;
+  height: 65%;
+  background-color: #283D47;
+  color: white;
+  font-family: Mont;
+  border: solid 0px;
+  cursor: pointer;
+}

@@ -1,0 +1,117 @@
+{
+  "Welcome to React": "welcome",
+  "Welcome to extia": "Bienvenido a\n",
+  "Welcome to": "Bienvenido a Extia",
+  "welcome": "Bienvenido",
+  "to extia": "a Extia",
+  "barcelona": "Barcelona",
+
+  "thinking": "Estoy planeando mudarme a Barcelona",
+  "going": "Me mudo a Barcelona",
+  "leaving": "Me instalo a Barcelona",
+  "installed": "La vida en Barcelona una vez que estoy aquí",
+  "living": "La vida en Barcelona una vez que estoy aquí",
+
+  "indevelopment": "(en desarrollo)",
+
+  "weather of the day": "El clima del día",
+  "weather comparison": "Comparación del clima",
+  "weather5-25": "25 °C > T > 5°C",
+  "weather<5": "Temperatura < 5°C",
+  "weather>25": "Temperatura > 25°C",
+
+  "walk": "Caminar",
+  "scooter": "Scooter",
+  "transport": "Transporte",
+  "trotinette": "Scooter electrico",
+  "bike": "Bicicleta",
+  "car": "Taxi",
+
+  "alone": "Individual",
+  "roommate": "Piso compartido",
+  "family": "Familia",
+  "couple": "Couple",
+
+  "typic": "Típico",
+  "dynamic": "Dinámico",
+  "touristic": "Turístico",
+  "international": "Internacional",
+  "loud": "Ruidoso",
+  "party": "Barrio de fiesta",
+
+  "central": "Central",
+  "commercial": "Commercial",
+  "agreable": "Agreable",
+  "others": "Others",
+
+  "calm": "Tranquilo",
+  "residential": "Residencial",
+  "space": "Espacioso",
+  "nature": "Zonas verdes",
+
+  "averagePriceBeer": "Precio medio de una cerveza",
+  "averagePriceFood": "Precio medio de un restaurante para dos personas",
+  "averagePriceAppartement": "Precio medio de un piso en el centro",
+
+  "averagePriceAppartementFlatsharing": "Precio medio de una habitacion en piso compartido en el centro",
+  "averagePriceAppartementCouple": "Precio medio de un piso individual/pareja en el centro",
+  "averagePriceAppartementFamily": "Precio medio de un piso de 3 habitaciones en el centro",
+
+  "Aix-en-Provence": "Aix-en-Pve",
+  "Barcelone":"Barcelona",
+  "Bordeaux": "Burdeos",
+  "Bruxelles": "Brusela",
+  "Bucarest": "Bucarest",
+  "Grenoble": "Grenoble",
+  "La Rochelle": "Rochelle",
+  "Lausanne": "Lausana",
+  "Lille": "Lila",
+  "Lisbonne": "Lisboa",
+  "Lyon": "Lyon",
+  "Montpellier": "Montpellier",
+  "Nantes": "Nantes",
+  "Niort": "Niort",
+  "Paris": "Paris",
+  "Porto": "Porto",
+  "Rennes": "Rennes",
+  "Strasbourg": "Estrasburgo",
+  "Toulon": "Toulon",
+  "Toulouse": "Tolosa",
+  "Tours": "Tours",
+  "Montréal": "Montreal",
+
+  "noCookie": "Este sitio no usa cookies.",
+
+  "days/year":"d./año",
+
+
+  "starting location":"Lugar de partida",
+  "place of arrival":"Lugar de llegada",
+
+  "who are we":"¿ Quienes somos ?",
+  "join us":"Únete a nosotros",
+  "our expertise":"Nuestra experiencia",
+  "contact us":"Contacto con nosotros ",
+  "inside Extia":"En Extia",
+  "eco conclusion":"Este sitio ha sido diseñado con el objetivo de reducir su huella energética mediante el uso de diversas técnicas, entre ellas la generación de una página estática.",
+
+  "cityMenuItem1": "Extia",
+  "cityMenuItem2": "Aeropuerto",
+  "cityMenuItem3": "Estación de Barcelona-Sants",
+  "cityMenuItem4": "Barceloneta",
+  "cityMenuItem5": "Plaza de Cataluña",
+  "cityMenuItem6": "Puerto Olímpico",
+  "cityMenuItem7": "Parque de la Ciutadella",
+  "cityMenuItem8": "Gràcia",
+  "cityMenuItem9": "Sagrada Familia",
+  "cityMenuItem10": "Bogatell",
+  "cityMenuItem11": "Nova Mar Bella",
+  "cityMenuItem12": "Plaza de España",
+  "cityMenuItem13": "Barrio Gótico",
+
+  "travelTimeCO2": "Este viaje equivale a :",
+
+  "meteoDataFrom": "*El historial meteorológico está tomado de https://www.historique-meteo.net",
+  "costLivingDataFrom": "**Las estimaciones del coste de la vida proceden de https://www.numbeo.com"
+
+}

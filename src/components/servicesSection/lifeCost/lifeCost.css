@@ -1,0 +1,493 @@
+.cardsComponent {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  /* padding: 12px; */
+}
+
+.lifeCostCard {
+  box-shadow: rgb(0 0 0 / 15%) 10px 15px 25px;
+  width: 28%;
+  margin: 8px 8px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  background-color: white;
+  padding: 24px;
+}
+
+.iconCard {
+  width: 100px;
+  display: block;
+  margin-top: 30px;
+}
+
+.livingButton {
+  height: 42px;
+  margin: 4px 0;
+  width: 80%;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: transparent;
+  font-family: gotham;
+  font-size: 120%;
+  color: rgba(40, 61, 71, 1);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.backArrow {
+  height: 75%;
+  width: 50%;
+}
+
+.backArrowBtn {
+  margin-top: 5px;
+  height: 35px;
+  width: 70px;
+  box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.currentPrice {
+  text-align: center;
+  font-family: gotham;
+  color: rgba(40, 61, 71, 1);
+  font-size: 28px;
+  margin: 4px 0;
+}
+
+.topContainer {
+  max-height: 224px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.citiesPricesContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: auto;
+}
+
+.bottomContainer {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: gotham;
+  font-size: 30px;
+}
+
+.prices {
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.city {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: bolder;
+  color: rgba(40, 61, 71, 1);
+  font-size: 120%;
+  margin: 4px 0;
+}
+
+.sign {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: rgba(40, 61, 71, 1);
+  font-size: 180%;
+  margin: 4px 0;
+}
+
+.priceCityPicto {
+  display: block;
+  width: 64px;
+}
+
+.livingButton:hover {
+  background-color: rgba(218, 218, 218, 0.452);
+  transition: background 0.5s;
+}
+
+.livingButton:active {
+  background-color: rgba(226, 226, 226, 0.692);
+  transition: background 0s;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.backArrowButton {
+  padding: 12px;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: rgba(209, 209, 209, 0.815);
+  color: rgba(40, 61, 71, 1);
+  box-shadow: rgba(199, 199, 199, 0.15) 0px 15px 25px;
+  background-color: rgb(255, 255, 255);
+}
+
+.backArrowButton:hover {
+  background-color: rgba(218, 218, 218, 0.3);
+  transition: background 0.5s;
+}
+
+.backArrowButton:active {
+  background-color: rgba(226, 226, 226, 0.692);
+  transition: background 0s;
+}
+
+.averagePrice {
+  margin-top: 10%;
+  text-align: center;
+  font-family: gotham;
+  font-weight: bold;
+  width: 90%;
+  font-size: 25px;
+  color:rgba(40, 61, 71, 1);
+  min-height: 160px;
+} 
+
+@media screen and (max-width: 1023px) {
+  .cardsComponent {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fb9b63;
+    box-shadow: rgb(0 0 0 / 15%) 0px 15px 25px;
+    border-radius: 30px;
+    /* padding: 12px; */
+  }
+  
+  .lifeCostCard {
+    box-shadow: rgb(0 0 0 / 15%) 10px 15px 25px;
+    min-width: 30%;
+    /* margin: 0 8px; */
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    background-color: white;
+    padding: 24px;
+  }
+  
+  .iconCard {
+    width: 82px;
+    display: block;
+    margin: 0 auto;
+  
+  }
+  
+  .priceSquare {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+    max-width: 66.66%;
+    height: 256px;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: rgba(189, 189, 189, 0.767);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 15px;
+  }
+  
+  .livingButton {
+    height: 42px;
+    margin: 4px 0;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: rgba(189, 189, 189, 0.767);
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 120%;
+    color: rgba(40, 61, 71, 1);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 20px;
+  }
+  
+  .currentPrice {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    color: rgba(40, 61, 71, 1);
+    margin: 4px 0;
+  }
+  
+  .topContainer {
+    max-height: 224px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .citiesPricesContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: auto;
+  }
+  
+  .bottomContainer {
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  
+  .city {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: bolder;
+    color: rgba(40, 61, 71, 1);
+    font-size: 100%;
+    margin: 8px 0;
+  }
+  
+  .sign {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    color: rgba(40, 61, 71, 1);
+    font-size: 180%;
+    margin: 4px 0;
+  }
+  
+  .priceCityPicto {
+    display: block;
+    width: 64px;
+  }
+  
+  .livingButton:hover {
+    background-color: rgba(218, 218, 218, 0.452);
+    transition: background 0.5s;
+  }
+  
+  .livingButton:active {
+    background-color: rgba(226, 226, 226, 0.692);
+    transition: background 0s;
+  }
+  
+  .form-control {
+    width: 100%;
+  }
+  
+  .backArrowButton {
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: rgba(209, 209, 209, 0.815);
+    color: rgba(40, 61, 71, 1);
+    box-shadow: rgba(199, 199, 199, 0.15) 0px 15px 25px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .backArrowButton:hover {
+    background-color: rgba(218, 218, 218, 0.3);
+    transition: background 0.5s;
+  }
+  
+  .backArrowButton:active {
+    background-color: rgba(226, 226, 226, 0.692);
+    transition: background 0s;
+  }
+  
+  .averagePrice {
+    margin-top: 5%;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 110%;
+    color:rgba(40, 61, 71, 1);
+    min-height: 105px;
+  } 
+}
+
+@media screen and (max-width: 767px) {
+  .cardsComponent {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #fb9b63;
+    box-shadow: rgb(0 0 0 / 15%) 0px 15px 25px;
+    border-radius: 30px;
+    padding: 12px;
+  }
+  
+  .lifeCostCard {
+    box-shadow: rgb(0 0 0 / 15%) 10px 15px 25px;
+    width: auto;
+    margin: 4px 8px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    background-color: white;
+    padding: 24px;
+  }
+  
+  .iconCard {
+    width: 82px;
+    display: block;
+    margin: 0 auto;
+  
+  }
+  
+  .priceSquare {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+    max-width: 66.66%;
+    height: 256px;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: rgba(189, 189, 189, 0.767);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 15px;
+  }
+  
+  .livingButton {
+    height: 42px;
+    margin: 4px 0;
+    width: 84%;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: rgba(189, 189, 189, 0.767);
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 120%;
+    color: rgba(40, 61, 71, 1);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 20px;
+  }
+  
+  .currentPrice {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    color: rgba(40, 61, 71, 1);
+    margin: 4px 0;
+  }
+  
+  .topContainer {
+    max-height: 224px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .citiesPricesContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: auto;
+  }
+  
+  .bottomContainer {
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  
+  .city {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: bolder;
+    color: rgba(40, 61, 71, 1);
+    font-size: 120%;
+    margin: 8px 0;
+  }
+  
+  .sign {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    color: rgba(40, 61, 71, 1);
+    font-size: 180%;
+  }
+  
+  .priceCityPicto {
+    display: block;
+    width: 64px;
+  }
+  
+  .livingButton:hover {
+    background-color: rgba(218, 218, 218, 0.452);
+    transition: background 0.5s;
+  }
+  
+  .livingButton:active {
+    background-color: rgba(226, 226, 226, 0.692);
+    transition: background 0s;
+  }
+  
+  .form-control {
+    width: 100%;
+  }
+  
+  .backArrowButton {
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: rgba(209, 209, 209, 0.815);
+    color: rgba(40, 61, 71, 1);
+    box-shadow: rgba(199, 199, 199, 0.15) 0px 15px 25px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .backArrowButton:hover {
+    background-color: rgba(218, 218, 218, 0.3);
+    transition: background 0.5s;
+  }
+  
+  .backArrowButton:active {
+    background-color: rgba(226, 226, 226, 0.692);
+    transition: background 0s;
+  }
+  
+  .averagePrice {
+    margin-top: 5%;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 100%;
+    color:rgba(40, 61, 71, 1);
+    min-height: unset;
+  } 
+}

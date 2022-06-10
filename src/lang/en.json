@@ -1,0 +1,115 @@
+{
+  "Welcome to extia": "Welcome to\n",
+  "Welcome to": "Welcome to Extia",
+  "welcome": "Welcome",
+  "to extia": "to Extia",
+  "barcelona": "Barcelona",
+
+  "thinking": "I am planning to move to Barcelona",
+  "going": "I am moving to Barcelona",
+  "leaving": "I am settling in Barcelona",
+  "installed": "Life in Barcelona once I'm here",
+  "living": "Life in Barcelona once I'm here",
+
+  "indevelopment": "(in development)",
+
+  "weather of the day": "Weather of the day",
+  "weather comparison": "Weather comparison",
+  "weather5-25": "25 °C > T > 5°C",
+  "weather<5": "Weather < 5°C",
+  "weather>25": "Weather > 25°C",
+
+  "walk": "Walk",
+  "scooter": "Scooter",
+  "transport": "Public transport",
+  "trotinette": "Electric Scooter",
+  "bike": "Bike",
+  "car": "Taxi",
+
+  "alone": "Individual flat",
+  "roommate": "Flatsharing",
+  "family": "Family",
+  "couple": "Couple",
+
+  "typic": "Typical",
+  "dynamic": "Dynamical",
+  "touristic": "Touristic",
+  "international": "International",
+  "loud": "Loud",
+  "party": "Party neighborhood",
+
+  "central": "Central",
+  "commercial": "Commercial",
+  "agreable": "Pleasant",
+  "others": "Others",
+
+  "calm": "Calm",
+  "residential": "Residential",
+  "space": "Space",
+  "nature": "Green zone",
+
+  "averagePriceBeer": "Average price for a beer",
+  "averagePriceFood": "Average price for a restaurant for two people",
+  "averagePriceAppartement": "Average price for a flat in the center",
+
+  "averagePriceAppartementFlatsharing": "Average price of a room in a shared apartment in the center",
+  "averagePriceAppartementCouple": "Average price of an individual/couple apartment in the center",
+  "averagePriceAppartementFamily": "Average price of a 3 bedroom apartment in the center",
+
+  "Aix-en-Provence": "Aix-en-Pve",
+  "Barcelone":"Barcelona",
+  "Bordeaux": "Bordeaux",
+  "Bruxelles": "Brussels",
+  "Bucarest": "Bucharest",
+  "Grenoble": "Grenoble",
+  "La Rochelle": "La Rochelle",
+  "Lausanne": "Lausanne",
+  "Lille": "Lille",
+  "Lisbonne": "Lisbon",
+  "Lyon": "Lyon",
+  "Montpellier": "Montpellier",
+  "Nantes": "Nantes",
+  "Niort": "Niort",
+  "Paris": "Paris",
+  "Porto": "Porto",
+  "Rennes": "Rennes",
+  "Strasbourg": "Strasbourg",
+  "Toulon": "Toulon",
+  "Toulouse": "Toulouse",
+  "Tours": "Tours",
+  "Montréal": "Montreal",
+
+  "noCookie": "This website does not use cookies.",
+
+  "days/year":"d./year",
+
+  "starting location":"Starting location",
+  "place of arrival":"Place of arrival",
+
+  "who are we":"Who are we?",
+  "join us":"Join us",
+  "our expertise":"Our expertise",
+  "contact us":"Contact us",
+  "inside Extia":"Inside Extia",
+  "eco conclusion":"This site was designed with the objective of reducing its energy footprint by using different techniques including the generation of a static page. ",
+
+  "cityMenuItem1": "Extia",
+  "cityMenuItem2": "Airport",
+  "cityMenuItem3": "Barcelona-Sants train station",
+  "cityMenuItem4": "Barceloneta",
+  "cityMenuItem5": "Catalunya square",
+  "cityMenuItem6": "Olympic Port",
+  "cityMenuItem7": "Ciutadella park",
+  "cityMenuItem8": "Gracia",
+  "cityMenuItem9": "Sagrada Familia",
+  "cityMenuItem10": "Bogatell",
+  "cityMenuItem11": "Nova Mar Bella",
+  "cityMenuItem12": "Spain square",
+  "cityMenuItem13": "Gothic quarter",
+
+  "travelTimeCO2": "This trip is equivalent to:",
+
+  "meteoDataFrom": "*The weather history is from https://www.historique-meteo.net",
+  "costLivingDataFrom": "**Cost of living estimates are from https://www.numbeo.com"
+
+}

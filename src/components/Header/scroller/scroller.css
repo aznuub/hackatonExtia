@@ -1,0 +1,61 @@
+.buttonExtia {
+  width: 90%;
+  z-index: 1;
+}
+
+
+.button {
+  margin-top: min(2vw);
+  background-position: center;
+  transition: background 0.8s;
+  border-color: rgba(40, 61, 71, 0.09);
+  border-radius: 10px;
+  border: 0px solid;
+  display:block; 
+  padding: 5%;
+  width: 60%;
+}
+
+.buttonSagrada {
+  margin-top: min(2vw);
+  background-position: center;
+  transition: background 0.8s;
+  border-color: rgba(40, 61, 71, 0.09);
+  border-radius: 10px;
+  border: 0px solid;
+  display:block; 
+  padding: 3%;
+  width: 50%;
+  margin-bottom: 2vw;
+}
+
+.button:hover {
+  background: #fabd84 radial-gradient(circle, transparent 1%, #fabd84)
+    center/12000%;
+}
+
+.buttonSagrada:hover {
+  background: #fabd84 radial-gradient(circle, transparent 1%, #fabd84)
+    center/12000%;
+}
+
+.buttonSagrada:hover {
+  background: #f3f3f3 radial-gradient(circle, transparent 1%, #e0e0e0 1%)
+    center/12000%;
+}
+
+.button:active {
+  background-color: #7a7a7a;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.list {
+  border: 0px solid;
+  height: auto;
+  background-color: #FC9254;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: -3px 10px 25px rgba(0, 0, 0, 0.2);
+}

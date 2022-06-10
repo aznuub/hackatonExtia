@@ -1,0 +1,291 @@
+.pictoCity {
+  height: 120px;
+  display: block;
+}
+
+.pictoMainCity {
+  display: block;
+  height: 120px;
+}
+
+.align {
+  font-family: mont;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+.align2 {
+  border-radius: 100px;
+  padding: 4px;
+  font-family: gotham;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cityBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: center;
+  width: 33.333%;
+  background-color: transparent;
+}
+
+.cityBox2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: center;
+  width: 33.333%;
+  background-color: transparent;
+}
+
+.carouselDots {
+  width: 56px;
+  height: 56px;
+  border-radius: 40%;
+  opacity: 1;
+  margin: auto;
+}
+
+.dots {
+  display: flex;
+  margin-top: -20%;
+}
+
+.weatherText {
+  text-align: center;
+  color: #283d47;
+  font-family: Mont;
+  font-size: 100%;
+  font-weight: bold;
+  margin-bottom: 27%;
+  width: 50%;
+  font-size: 25px;
+}
+
+.comparisonTitle {
+  color: #283d47;
+  font-family: mont;
+  font-size: 35px;
+  text-align: center;
+}
+
+.carousel {
+
+  border-radius: 30px;
+}
+
+.BrainhubCarousel__thumbnail {
+  padding: 5px !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .pictoCity {
+    width: 48px;
+    display: block;
+  }
+
+  .pictoMainCity {
+    display: block;
+    width: 48px;
+  }
+
+  .align {
+    font-family: mont;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .align2 {
+    background-color: rgba(128, 128, 128, 0.192);
+    border-radius: 100px;
+    padding: 4px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .cityBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+    width: 33.333%;
+  }
+
+  .cityBox2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+    width: 33.333%;
+  }
+
+  .carouselDots {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    opacity: 1;
+    margin: auto;
+    filter: none;
+  }
+
+  .carouselDotsFocus {
+    width: 32px;
+    height: 32px;
+    border-radius: 40%;
+    opacity: 1;
+    filter:none;
+  }
+
+  .weatherText {
+    text-align: center;
+    color: #283d47;
+    font-family: Mont;
+    font-weight: bold;
+    font-size: 80%;
+    margin-bottom: 27%;
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .carousel {
+
+    border-radius: 30px;
+  }
+
+  .BrainhubCarousel__thumbnail {
+    padding: 5px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comparisonTitle {
+    color: #283d47;
+    font-family: mont;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+  }
+  .pictoCity {
+    width: 30px;
+    height: 48px;
+    display: block;
+  }
+
+  .pictoMainCity {
+    display: block;
+    width: 30px;
+    height: 48px;
+  }
+
+  .align {
+    font-size: 120%;
+    font-family: "Nunito";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .align2 {
+    background-color: rgba(128, 128, 128, 0.192);
+    border-radius: 100px;
+    padding: 4px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .cityBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    align-items: center;
+    width: 33.333%;
+    padding: 0px 0;
+    margin-bottom: 90px;
+    margin-left: 66px;
+  }
+
+  .cityBox2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+    width: 33.333%;
+    border-radius: 0px;
+    padding: 0px 0;
+    margin-bottom: 90px;
+    margin-right: 66px;
+  }
+
+  .carouselDots {
+    width: 35px;
+    height: 35px;
+    border-radius: 40%;
+    opacity: 1;
+    margin: auto;
+    filter: none;
+  }
+
+  .carouselDotsFocus {
+    width: 26px;
+    height: 26px;
+    border-radius: 40%;
+    opacity: 1;
+    filter: none;
+  }
+
+  .dots {
+    margin-top: -26%;
+  }
+
+  .weatherText {
+    text-align: center;
+    color: #283d47;
+    align-self: flex-end;
+    width: 50.3333%;
+    font-size: 12px;
+    font-family: mont;
+    font-weight: bold;
+  }
+
+  .carousel {
+
+    border-radius: 30px;
+  }
+
+  .BrainhubCarousel__thumbnail {
+    padding: 5px !important;
+  }
+}
