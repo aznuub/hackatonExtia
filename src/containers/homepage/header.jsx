@@ -1,7 +1,4 @@
-
-import { SelectLangue } from "../../components/Header/selectLangue/selectLangue";
 import { Scroller } from "../../components/Header/scroller/scroller";
-import { CityButton } from "../../components/Header/cityButton/cityButton";
 import { DualCityButton } from "../../components/Header/dualCityButton/dualCityButton";
 import { Carousel } from "../../components/Header/carousel/carousel";
 import { GoDownArrow } from "../../components/Header/goDownArrow/goDownArrow"
@@ -188,7 +185,7 @@ export function Header(props) {
           {props.format !== "s" && (
             <>
               {props.format === "l" && <Carousel format={props.format} />}
-              <Scroller city={props.destination} destination={props.destination} origin={props.origin}/>
+              <Scroller destination={props.destination} origin={props.origin}/>
             </>
           )}
           {props.format !== "s" && (<>

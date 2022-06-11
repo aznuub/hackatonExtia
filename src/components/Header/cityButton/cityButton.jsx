@@ -7,7 +7,6 @@ import { cityData, cityArrival } from "../../../data/cityName";
 import sagradaPicto from "../../../images/city/orange/barcelone.png";
 import { t } from "i18next";
 import "./cityButton.css";
-import { color } from "@mui/system";
 
 const boxStyle = {
   display: "flex",
@@ -22,8 +21,6 @@ const boxStyle = {
   width: "550px",
   boxShadow: "-3px 10px 25px rgba(0, 0, 0, 0.1)",
 };
-
-
 
 const boxStyleSmall = {
   display: "flex",

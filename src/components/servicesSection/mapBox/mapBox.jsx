@@ -42,7 +42,7 @@ export function MapBox(props) {
     if (!map.current) return;
     map.current.flyTo({
       center: [
-        lng,
+        lng, 
         lat
       ]
     });
