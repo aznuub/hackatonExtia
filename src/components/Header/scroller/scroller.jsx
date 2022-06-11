@@ -75,7 +75,8 @@ export function Scroller(props) {
 
   useEffect(() => {
     setCityPicto(props.city);
-  }, [props.city]);
+    setArrivalCityPicto(dest.destination)
+  }, [props.city, dest.destination]);
 
   useEffect(() => {
     setOrigin(props.origin);

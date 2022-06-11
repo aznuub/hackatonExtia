@@ -122,7 +122,7 @@ function Homepage(props) {
   }
 
   const [city, setCity] = useState(cityData.find((cityItem) => cityItem.name === "Paris"));
-  const [destination, setDestination] = useState(cityData.find((cityItem) => cityItem.name === "Paris"));
+  const [destination, setDestination] = useState(cityData.find((cityItem) => cityItem.name === "Lille"));
   const [origin, setOrigin] = useState(cityData.find((cityItem) => cityItem.name === "Paris"));
 
   const cityChange = (data) => {
@@ -158,7 +158,7 @@ function Homepage(props) {
               <img style={buttonBCNStyle} src={arriving} alt="logo" />
             </Link>
             <Link activeClass="active" to="part4" spy={true} style={{ display: "block" }}>
-              <img style={buttonBCNStyle} src={here} alt="logo" />
+              <img style={buttonBCNStyle} src={destination.logo} alt="logo" />
             </Link>
           </div>
 

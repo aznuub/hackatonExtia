@@ -23,8 +23,6 @@ const boxStyle = {
   boxShadow: "-3px 10px 25px rgba(0, 0, 0, 0.1)",
 };
 
-
-
 const boxStyleSmall = {
   display: "flex",
   justifyContent: "space-between",
