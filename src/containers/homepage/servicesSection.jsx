@@ -52,7 +52,7 @@ export function ServicesSection(props) {
         ...weatherSectionStyle,
         width: "100%",
       }
-      flexBox ={
+      flexBox = {
         ...flexBox,
         display: "block",
       }
@@ -69,7 +69,7 @@ export function ServicesSection(props) {
       }
       break;
     case "m":
-      flexBox ={
+      flexBox = {
         ...flexBox,
         display: "",
       }
@@ -95,18 +95,18 @@ export function ServicesSection(props) {
         padding: "24px 3% 24px 12%",
       };
       break;
-      default:
-        break;
+    default:
+      break;
   }
 
   return (
     <div style={backgroundStyle} id="weather">
       <div style={flexBox}>
-        <div style={weatherSectionStyle}>
-          <ActualWeather city={city} format={props.format} />
-          <WeatherCarousel city={city} format={props.format} />
+        <div style={weatherSectionStyle} key="weatherBlock">
+          <ActualWeather key="actualWeather" city={city} format={props.format} />
+          <WeatherCarousel key="weatherCarousel" city={city} format={props.format} />
         </div>
-        <div style={mapAndTravelStyle}>
+        <div style={mapAndTravelStyle} key="travelTimeBlock">
           <TravelTimeComponent format={props.format} />
         </div>
       </div>

@@ -2,6 +2,7 @@
 import { SelectLangue } from "../../components/Header/selectLangue/selectLangue";
 import { Scroller } from "../../components/Header/scroller/scroller";
 import { CityButton } from "../../components/Header/cityButton/cityButton";
+import { DualCityButton } from "../../components/Header/dualCityButton/dualCityButton";
 import { Carousel } from "../../components/Header/carousel/carousel";
 import { GoDownArrow } from "../../components/Header/goDownArrow/goDownArrow"
 import { NoCookie } from "../../components/Header/autoSlide/autoSlide";
@@ -150,7 +151,7 @@ export function Header(props) {
   return (
     <>
       <div className="elemStyle" style={elemStyle} name="Header" format={props.format}>
-      <div style={props.format === "s" ? props.orientation === "portrait" ? circleStyleS : circleStyleLandscape : props.format === "m" ? circleStyleM : circleStyle} />
+        <div style={props.format === "s" ? props.orientation === "portrait" ? circleStyleS : circleStyleLandscape : props.format === "m" ? circleStyleM : circleStyle} />
         <div>
           <div style={titleAndCityButtonContainer}>
             <div className="titleFont">
@@ -173,7 +174,16 @@ export function Header(props) {
                 </span>
               </div>
             </div>
-            <CityButton onChange={props.onChange} city={props.city} format={props.format} />
+            {/* <CityButton onChange={props.onChange} city={props.city} format={props.format} /> */}
+            <DualCityButton
+              onChange={props.onChange} 
+              city={props.city}
+              onDestinationChange={props.destinationChange}
+              destination={props.destination}
+              onOriginChange={props.originChange}
+              origin={props.origin}
+              format={props.format} 
+            />
           </div>
           {props.format !== "s" && (
             <>

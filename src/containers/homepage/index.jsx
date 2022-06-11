@@ -122,10 +122,20 @@ function Homepage(props) {
   }
 
   const [city, setCity] = useState(cityData.find((cityItem) => cityItem.name === "Paris"));
+  const [destination, setDestination] = useState(cityData.find((cityItem) => cityItem.name === "Paris"));
+  const [origin, setOrigin] = useState(cityData.find((cityItem) => cityItem.name === "Paris"));
 
   const cityChange = (data) => {
     setCity(data);
   };
+
+  const destinationChange = (data) => {
+    setDestination(data);
+  };
+
+  const originChange = (data) => {
+    setOrigin(data);
+  }
 
   return (
     <>
@@ -149,7 +159,14 @@ function Homepage(props) {
 
         </>)}
       {/* <PageContainer style={contentStyle}> */}
-        <Header onChange={cityChange} city={city} lngChange={props.lngChange} format={props.format} orientation={props.orientation} />
+        <Header 
+          onChange={cityChange} 
+          city={city} 
+          onDestinationChange={destinationChange} 
+          destination={destination} 
+          onOriginChange={originChange}
+          origin={origin}
+          lngChange={props.lngChange} format={props.format} orientation={props.orientation} />
         <ServicesSection name="weather" city={city} format={props.format} />
         <div id="part2" style={blue}>
           <div className="travauxContainer">

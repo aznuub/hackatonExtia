@@ -193,7 +193,6 @@ export function TravelTimeComponent(props) {
         </div>
       </div>
       <div className="travelCardContainer">
-        {console.log("travelTime = ", travelTime[5])}
         <Card
           format={props.format}
           src={hover1 ? pietonW : pieton}
