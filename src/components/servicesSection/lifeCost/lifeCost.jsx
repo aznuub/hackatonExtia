@@ -5,7 +5,6 @@ import solo from "../../../images/lifeStyle/flat.png";
 import roommate from "../../../images/lifeStyle/coloc.png";
 import beer from "../../../images/lifeStyle/beer.png";
 import cutlery from "../../../images/lifeStyle/restaurant.png";
-import { cityArrival } from "../../../data/cityName";
 import { t } from "i18next";
 import "./lifeCost.css";
 import backArrow from "../../../images/back.png";
@@ -26,19 +25,20 @@ function handleLifeCost(lifeStyle, city) {
   }
 }
 
-function handleLifeCostArrival(lifeStyle) {
+function handleLifeCostArrival(lifeStyle, destination) {
   return lifeStyle < 2
-    ? cityArrival.priceFlat.individual + "€"
+    ? destination.priceFlat.individual + "€"
     : lifeStyle === 2
-    ? cityArrival.priceFlat.roomate + "€"
+    ? destination.priceFlat.roomate + "€"
     : lifeStyle > 2
-    ? cityArrival.priceFlat.family + "€"
-    : cityArrival.priceFlat.roomate + "€";
+    ? destination.priceFlat.family + "€"
+    : destination.priceFlat.roomate + "€";
 }
 
 function Card(props) {
   const logo = props.logo;
   const city = props.city;
+  const destination = props.destination;
   const priceCity = props.priceCity;
   const priceArrival = props.priceArrival;
   const handleChange = props.handleChange;
@@ -53,7 +53,7 @@ function Card(props) {
         <div className="bottomContainer">
           <span className="city">{city.code}</span>
           <span className="city">/</span>
-          <span className="city">{cityArrival.code}</span>
+          <span className="city">{destination.code}</span>
         </div>
         <div className="bottomContainer">
           <span className="currentPrice">{priceCity}</span>
@@ -95,6 +95,7 @@ function CardLifeStyle(props) {
 export function LifeCost(props) {
   const [lifeStyle, setLifeStyle] = useState(0);
   const city = props.city;
+  const destination = props.destination;
   const appartementPrice =
     lifeStyle < 2
       ? t("averagePriceAppartementCouple")
@@ -111,26 +112,29 @@ export function LifeCost(props) {
       <Card
         logo={beer}
         city={city}
-        cityPicto={cityArrival.logo}
+        destination={destination}
+        cityPicto={destination.logo}
         priceCity={city.beerPrice + "€"}
-        priceArrival={cityArrival.beerPrice + "€"}
+        priceArrival={destination.beerPrice + "€"}
         averagePrice={t("averagePriceBeer")}
       />
       <Card
         logo={cutlery}
         city={city}
-        cityPicto={cityArrival.logo}
+        destination={destination}
+        cityPicto={destination.logo}
         priceCity={city.restaurantPrice + "€"}
-        priceArrival={cityArrival.restaurantPrice + "€"}
+        priceArrival={destination.restaurantPrice + "€"}
         averagePrice={t("averagePriceFood")}
       />
       {lifeStyle > 0 ? (
         <Card
           logo={handleSrc(lifeStyle)}
           city={city}
-          cityPicto={cityArrival.logo}
+          destination={destination}
+          cityPicto={destination.logo}
           priceCity={handleLifeCost(lifeStyle, city)}
-          priceArrival={handleLifeCostArrival(lifeStyle)}
+          priceArrival={handleLifeCostArrival(lifeStyle, destination)}
           handleChange={handleChange}
           averagePrice={appartementPrice}
         />

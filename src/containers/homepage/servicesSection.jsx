@@ -111,7 +111,7 @@ export function ServicesSection(props) {
         </div>
       </div>
       <div style={lifeCostStyle}>
-        <LifeCost onChange={props.onChange} city={city} format={props.format} />
+        <LifeCost onChange={props.onChange} city={city} destination={props.destination} format={props.format} />
       </div>
     </div>
   );
