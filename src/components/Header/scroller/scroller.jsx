@@ -56,7 +56,10 @@ const whiteNavbar = {
 };
 
 export function Scroller(props) {
+
   const [cityPicto, setCityPicto] = useState(props.city);
+  const [destination, setDestination] = useState(props.destination);
+  const [origin, setOrigin] = useState(props.origin);
   const [scrollY, setScrollY] = useState(window.scrollY);
 
   useEffect(() => {
@@ -74,6 +77,14 @@ export function Scroller(props) {
     setCityPicto(props.city);
   }, [props.city]);
 
+  useEffect(() => {
+    setOrigin(props.origin);
+  }, [props.origin]);
+
+  useEffect(() => {
+    setDestination(props.destination);
+  }, [props.destination]);
+
   return (
     <>
     <div style={fixedStyleNav}>
@@ -82,13 +93,13 @@ export function Scroller(props) {
           <img className="button" src={scrollY > 0.74 * window.innerHeight ? thinkingO : thinking} alt="logo" />
         </Link>
         <Link activeClass="active" to="part2" spy={true}>
-          <img className="buttonSagrada" src={scrollY > 0.74 * window.innerHeight ? cityPicto.logo_o : cityPicto.logo} alt="logo" />
+          <img className="buttonSagrada" src={scrollY > 0.74 * window.innerHeight ? origin.logo_o : origin.logo} alt="logo" />
         </Link>
         <Link activeClass="active" to="part3" spy={true}>
           <img className="button" src={scrollY > 0.74 * window.innerHeight ? arriveO : arrive} alt="logo" />
         </Link>
         <Link activeClass="active" to="part4" spy={true}>
-          <img className="buttonSagrada" src={scrollY > 0.74 * window.innerHeight ? hereO : here} alt="logo" />
+          <img className="buttonSagrada" src={scrollY > 0.74 * window.innerHeight ? destination.logo_o : destination.logo} alt="logo" />
         </Link>
       </nav>
     </div>

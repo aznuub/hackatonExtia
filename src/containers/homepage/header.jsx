@@ -178,9 +178,9 @@ export function Header(props) {
             <DualCityButton
               onChange={props.onChange} 
               city={props.city}
-              onDestinationChange={props.destinationChange}
+              destinationChange={props.destinationChange}
               destination={props.destination}
-              onOriginChange={props.originChange}
+              originChange={props.originChange}
               origin={props.origin}
               format={props.format} 
             />
@@ -188,7 +188,7 @@ export function Header(props) {
           {props.format !== "s" && (
             <>
               {props.format === "l" && <Carousel format={props.format} />}
-              <Scroller city={props.city} />
+              <Scroller city={props.destination} destination={props.destination} origin={props.origin}/>
             </>
           )}
           {props.format !== "s" && (<>

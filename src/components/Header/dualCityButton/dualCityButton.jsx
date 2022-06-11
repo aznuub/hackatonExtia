@@ -26,10 +26,12 @@ export function DualCityButton(props) {
     // }
 
     function selectDestination(cityData) {
+        props.destinationChange(cityData)
         setDestination(cityData);
     }
 
     function selectOrigin(cityData) {
+        props.originChange(cityData)
         setOrigin(cityData);
     }
 
@@ -72,6 +74,9 @@ export function DualCityButton(props) {
             </MenuItem>
         );
     });
+
+    
+
 
     return (
         <FormControl style={buttonStyle} format={props.format} fullwidth="true">

@@ -130,11 +130,16 @@ function Homepage(props) {
   };
 
   const destinationChange = (data) => {
+    console.log("Setting destination to : ", data)
     setDestination(data);
   };
 
   const originChange = (data) => {
     setOrigin(data);
+  }
+
+  const test = (data) => {
+    console.log("TESTING THIS SHIT : ", data)
   }
 
   return (
@@ -162,10 +167,10 @@ function Homepage(props) {
         <Header 
           onChange={cityChange} 
           city={city} 
-          onDestinationChange={destinationChange} 
           destination={destination} 
-          onOriginChange={originChange}
           origin={origin}
+          destinationChange={destinationChange}
+          originChange={originChange}
           lngChange={props.lngChange} format={props.format} orientation={props.orientation} />
         <ServicesSection name="weather" city={city} format={props.format} />
         <div id="part2" style={blue}>
