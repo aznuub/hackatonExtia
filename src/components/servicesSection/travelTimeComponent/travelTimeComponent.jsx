@@ -30,7 +30,7 @@ function Card(props) {
   const travelTime = props.travelTime;
   const alt = props.alt;
 
-  travelPicto = {
+  var travelPicto = {
     width: "48px",
   };
 
@@ -62,10 +62,7 @@ function Card(props) {
     transition: "all 0.3s ease-in",
   };
 
-  var travelPicto = {
-    width: "48px",
-  };
-
+  
   switch (props.format) {
     case "m":
       travelCard.margin = "auto";

@@ -3,8 +3,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
-import { cityData, cityArrival } from "../../../data/cityName";
-import sagradaPicto from "../../../images/city/orange/barcelone.png";
+import { cityData } from "../../../data/cityName";
 import { t } from "i18next";
 import "./dualCityButton.css";
 import {

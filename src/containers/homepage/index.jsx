@@ -1,37 +1,32 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { SocialMedia } from "../../components/footer/socialMedia/socialMedia";
 import { ServicesSection } from "./servicesSection";
 import { Header } from "./header";
 import { Link } from "react-scroll";
 import { cityData } from "./../../data/cityName";
-import human1 from "../../images/humans/humanGo.png";
-import human2 from "../../images/humans/humanHere.png";
-import human3 from "../../images/humans/humanStay.png";
 import thinking from "../../images/v2/Header/Navbar/thinking.png";
 import arriving from "../../images/v2/Header/Navbar/box.png";
 import here from "../../images/v2/Header/Navbar/sagrada_white.png";
 import travaux from "../../images/travaux.png";
-import { t } from "i18next";
 import { StickyHeader } from "../../components/stickyHeader/stickyHeader";
 import "./index.css";
 
-const PageContainer = styled.div`
-  min-width: 100%;
-  height: calc(100% - 80px);
-  max-width: '100%';
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-`;
+// const PageContainer = styled.div`
+//   min-width: 100%;
+//   height: calc(100% - 80px);
+//   max-width: '100%';
+//   display: flex;
+//   flex-direction: column;
+//   overflow-x: hidden;
+// `;
 
-const yellow = {
-  minHeight: "51vw",
-  minWidth: "100%",
-  paddingTop: "1vw",
-  paddingBottom: "8vw",
-  background: "#FCCB56",
-};
+// const yellow = {
+//   minHeight: "51vw",
+//   minWidth: "100%",
+//   paddingTop: "1vw",
+//   paddingBottom: "8vw",
+//   background: "#FCCB56",
+// };
 
 const blue = {
   maxWidth: "100vw",
@@ -40,42 +35,43 @@ const blue = {
   padding: "3% 2% 60px",
 };
 
-const red = {
-  minHeight: "51vw",
-  minWidth: "100%",
-  paddingTop: "1vw",
-  paddingBottom: "8vw",
-  background: "#FC6C54",
-};
+// const red = {
+//   minHeight: "51vw",
+//   minWidth: "100%",
+//   paddingTop: "1vw",
+//   paddingBottom: "8vw",
+//   background: "#FC6C54",
+// };
 
-const text = {
-  verticalAlign: "middle",
-  textAlign: "center",
-  position: "relative",
-  paddingTop: "5vw",
-  marginBottom: "-5vw",
-  fontFamily: "'Nunito', sans-serif",
-  fontSize: "30px",
-};
+// const text = {
+//   verticalAlign: "middle",
+//   textAlign: "center",
+//   position: "relative",
+//   paddingTop: "5vw",
+//   marginBottom: "-5vw",
+//   fontFamily: "'Nunito', sans-serif",
+//   fontSize: "30px",
+// };
 
-const textSmall = {
-  verticalAlign: "middle",
-  textAlign: "center",
-  position: "relative",
-  paddingTop: "5vw",
-  marginBottom: "-2vw",
-  fontFamily: "'Nunito', sans-serif",
-  fontSize: "18px",
-};
+// const textSmall = {
+//   verticalAlign: "middle",
+//   textAlign: "center",
+//   position: "relative",
+//   paddingTop: "5vw",
+//   marginBottom: "-2vw",
+//   fontFamily: "'Nunito', sans-serif",
+//   fontSize: "18px",
+// };
 
-const imgStyle = {
-  width: "100%",
-  display: "block",
-  margin: "auto",
-};
+// const imgStyle = {
+//   width: "100%",
+//   display: "block",
+//   margin: "auto",
+// };
 
 function Homepage(props) {
-  var contentStyle = {};
+  // eslint-disable-next-line no-unused-vars
+  var contentStyle = {}; //eslint-disable-line
 
   var buttonStyle = {
     backgroundPosition: "center",
@@ -116,6 +112,7 @@ function Homepage(props) {
   };
 
   if (props.format !== "l") {
+    // eslint-disable-next-line
     contentStyle = {
       marginBottom: "76px",
     };
@@ -130,16 +127,11 @@ function Homepage(props) {
   };
 
   const destinationChange = (data) => {
-    console.log("Setting destination to : ", data)
     setDestination(data);
   };
 
   const originChange = (data) => {
     setOrigin(data);
-  }
-
-  const test = (data) => {
-    console.log("TESTING THIS SHIT : ", data)
   }
 
   return (
@@ -175,7 +167,7 @@ function Homepage(props) {
         <ServicesSection name="weather" city={city} format={props.format} />
         <div id="part2" style={blue}>
           <div className="travauxContainer">
-            <img src={travaux} className="travaux" />
+            <img src={travaux} className="travaux" alt="none"/>
             <p className="travauxTxt">
               Cette partie du site est en cours de construction
               <br />

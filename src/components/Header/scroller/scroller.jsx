@@ -1,16 +1,10 @@
 import { useState, useEffect } from "react";
 import thinking from "../../../images/v2/Header/Navbar/thinking.png";
-import tour from "../../../images/v2/Header/Navbar/tour.png";
 import arrive from "../../../images/v2/Header/Navbar/box.png";
-import here from "../../../images/v2/Header/Navbar/sagrada_white.png";
 
 import thinkingO from "../../../images/v2/Header/Navbar/think_o.png";
-import tourO from "../../../images/v2/Header/Navbar/tour_o.png";
 import arriveO from "../../../images/v2/Header/Navbar/box_o.png";
-import hereO from "../../../images/v2/Header/Navbar/sagrada_o.png";
 import { Link } from "react-scroll";
-import extiaLogo from "../../../images/ExtiaLogo.svg";
-import extiaLogoWhite from "../../../images/Extialogoblanc.svg";
 
 import "./scroller.css";
 
@@ -57,7 +51,7 @@ const whiteNavbar = {
 
 export function Scroller(props) {
 
-  const [cityPicto, setCityPicto] = useState(props.city);
+  // const [cityPicto, setCityPicto] = useState(props.city);
   const [destination, setDestination] = useState(props.destination);
   const [origin, setOrigin] = useState(props.origin);
   const [scrollY, setScrollY] = useState(window.scrollY);
@@ -73,9 +67,9 @@ export function Scroller(props) {
     };
   }, []);
 
-  useEffect(() => {
-    setCityPicto(props.city);
-  }, [props.city]);
+  // useEffect(() => {
+  //   setCityPicto(props.city);
+  // }, [props.city]);
 
   useEffect(() => {
     setOrigin(props.origin);
