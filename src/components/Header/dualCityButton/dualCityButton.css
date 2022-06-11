@@ -147,3 +147,7 @@ animate__bounceOutLeft
   width: 20px;
   height: 20px;
 }
+
+.destinationElement {
+  left: 50%;
+}
