@@ -104,7 +104,7 @@ export function ServicesSection(props) {
       <div style={flexBox}>
         <div style={weatherSectionStyle} key="weatherBlock">
           <ActualWeather key="actualWeather" city={city} format={props.format} destination={props.destination} />
-          <WeatherCarousel key="weatherCarousel" city={city} format={props.format} />
+          <WeatherCarousel key="weatherCarousel" city={city} destination={props.destination} format={props.format} />
         </div>
         <div style={mapAndTravelStyle} key="travelTimeBlock">
           <TravelTimeComponent format={props.format} />

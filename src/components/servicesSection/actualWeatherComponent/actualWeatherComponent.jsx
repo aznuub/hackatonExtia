@@ -7,7 +7,6 @@ import snow from "../../../images/carousel/rain.png";
 import drizzle from "../../../images/carousel/rain.png";
 import thunderstorm from "../../../images/carousel/rain.png";
 import atmosphere from "../../../images/carousel/rain.png";
-import { cityArrival } from "../../../data/cityName";
 import { t } from "i18next";
 
 import "./actualWeatherComponent.css";
@@ -199,8 +198,6 @@ export function ActualWeather(props) {
   const format = props.format;
   const city = props.city;
   const destination = props.destination;
-
-  console.log(destination)
 
   var CardStyle;
   var line;

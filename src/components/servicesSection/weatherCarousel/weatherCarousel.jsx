@@ -9,17 +9,18 @@ import sunActive from "../../../images/carousel/sunButton.png";
 import snowActive from "../../../images/carousel/snowButton.png";
 import cloudActive from "../../../images/carousel/cloudButton.png";
 import sagradaPicto from "../../../images/city/sagrada.png";
-import { cityArrival } from "../../../data/cityName";
 
 import "./weatherCarousel.css";
 
 function WeatherComponent(props) {
+
   const city = props.city;
-  const mainCity = cityArrival.code;
+  const destination = props.destination;
+  const mainCity = destination.code;
   const mainCityDays = [
-    cityArrival.temperature.weatherCold + t("days/year"),
-    cityArrival.temperature.weatherMedium + t("days/year"),
-    cityArrival.temperature.weatherHot + t("days/year"),
+    destination.temperature.weatherCold + t("days/year"),
+    destination.temperature.weatherMedium + t("days/year"),
+    destination.temperature.weatherHot + t("days/year"),
   ];
 
   var secondBox;
@@ -68,7 +69,7 @@ function WeatherComponent(props) {
       </div>
       <span className="weatherText">{props.weather}</span>
       <div className="cityBox2">
-        <img className="pictoMainCity" src={sagradaPicto} alt="mainCity" />
+        <img className="pictoCity" src={destination.logo} alt="mainCity" />
         <div style={{ display: "flex", width: "55%", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
           <span className="align">{mainCity}</span>
           <div className="align2">
@@ -158,6 +159,7 @@ const WeatherCarousel = (props) => {
       <WeatherComponent
         format={props.format}
         city={props.city}
+        destination={props.destination}
         img={img}
         weather={weather === 2 ? t("weather>25") : weather === 1 ? t("weather5-25") : t("weather<5")}
         mainCityDay={cityDay + t("days/year")}

@@ -3,7 +3,6 @@ import { DualCityButton } from "../../components/Header/dualCityButton/dualCityB
 import { Carousel } from "../../components/Header/carousel/carousel";
 import { GoDownArrow } from "../../components/Header/goDownArrow/goDownArrow"
 import { NoCookie } from "../../components/Header/autoSlide/autoSlide";
-import { cityArrival } from "../../data/cityName";
 import { t } from "i18next";
 
 import "./header.css";
@@ -167,7 +166,7 @@ export function Header(props) {
                   <span>{' '}</span>
                 )}
                 <span style={props.format === "s" ? titleBcnStyleSmall : props.format === "m" ? titleBcnStyleMedium : titleBcnStyle} className="bcnFont">
-                  {t(cityArrival.name)} !
+                  {t(props.destination.name)} !
                 </span>
               </div>
             </div>
