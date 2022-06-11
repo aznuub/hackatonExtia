@@ -103,7 +103,7 @@ export function ServicesSection(props) {
     <div style={backgroundStyle} id="weather">
       <div style={flexBox}>
         <div style={weatherSectionStyle} key="weatherBlock">
-          <ActualWeather key="actualWeather" city={city} format={props.format} />
+          <ActualWeather key="actualWeather" city={city} format={props.format} destination={props.destination} />
           <WeatherCarousel key="weatherCarousel" city={city} format={props.format} />
         </div>
         <div style={mapAndTravelStyle} key="travelTimeBlock">

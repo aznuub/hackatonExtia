@@ -164,7 +164,7 @@ function Homepage(props) {
           destinationChange={destinationChange}
           originChange={originChange}
           lngChange={props.lngChange} format={props.format} orientation={props.orientation} />
-        <ServicesSection name="weather" city={city} format={props.format} />
+        <ServicesSection name="weather" city={city} destination={destination} format={props.format} />
         <div id="part2" style={blue}>
           <div className="travauxContainer">
             <img src={travaux} className="travaux" alt="none"/>
