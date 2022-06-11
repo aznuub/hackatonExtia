@@ -122,7 +122,7 @@ function Homepage(props) {
   }
 
   const [city, setCity] = useState(cityData.find((cityItem) => cityItem.name === "Paris"));
-  const [destination, setDestination] = useState(cityData.find((cityItem) => cityItem.name === "Paris"));
+  const [destination, setDestination] = useState(cityData.find((cityItem) => cityItem.name === "Strasbourg"));
   const [origin, setOrigin] = useState(cityData.find((cityItem) => cityItem.name === "Paris"));
 
   const cityChange = (data) => {

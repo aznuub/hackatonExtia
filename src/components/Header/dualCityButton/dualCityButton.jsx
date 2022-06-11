@@ -77,7 +77,6 @@ export function DualCityButton(props) {
         <FormControl style={buttonStyle} format={props.format} fullwidth="true">
             <Box format={props.format} style={props.format === "s" ? boxStyleSmall : boxStyle}>
                 <Select
-                    key="destinationKey"
                     value={""}
                     style={props.format === "s" ? selectStyleSmall : selectStyle}
                     sx={{ m: 1, minWidth: 200 }}
@@ -86,19 +85,17 @@ export function DualCityButton(props) {
                     onClick={() => setOpenLeft(!openLeft)}
                 >
                     {/* {cityNameTab} */}
-                    <CityNameTab selector={selectDestination} />
+                    <CityNameTab selector={selectOrigin} />
                 </Select>
-                <div key="destinationDivKey" className="elementSelected" format={props.format} onClick={() => setOpenLeft(!openLeft)}>
-                    <img src={destination.logo_o} alt="logo" style={props.format === "s" ? logoStyleSmall : logoStyle} />
+                <div className="elementSelectedLeft" format={props.format} onClick={() => setOpenLeft(!openLeft)}>
+                    <img src={origin.logo_o} alt="logo" style={props.format === "s" ? logoStyleSmall : logoStyle} />
                     <div className="nameAndCode">
-                        <span style={cityNameDepartureStyle}>{t(destination.name)}</span>
-                        {/* <span style={cityNameDepartureStyle}>{destination.name}</span> */}
+                        <span style={cityNameDepartureStyle}>{t(origin.name)}</span>
                     </div>
                 </div>
 
                 <div className="separatorStyle"></div>
                 <Select
-                    key="originKey"
                     value={""}
                     style={props.format === "s" ? selectStyleSmall : selectStyle}
                     sx={{ m: 1, minWidth: 200 }}
@@ -106,13 +103,12 @@ export function DualCityButton(props) {
                     onClose={() => setOpenRight(false)}
                     onClick={() => setOpenRight(!openRight)}
                 >
-                    <CityNameTab selector={selectOrigin} />
+                    <CityNameTab selector={selectDestination} />
                 </Select>
-                <div key="originDivKey" className="elementSelected" format={props.format} onClick={() => setOpenRight(!openRight)}>
-                    <img src={origin.logo_o} alt="logo" style={props.format === "s" ? logoStyleSmall : logoStyle} />
+                <div className="elementSelectedRight" format={props.format} onClick={() => setOpenRight(!openRight)}>
+                    <img src={destination.logo_o} alt="logo" style={props.format === "s" ? logoStyleSmall : logoStyle} />
                     <div className="nameAndCode">
-                        <span style={cityNameArrivalStyle}>{t(origin.name)}</span>
-                        {/* <span>{origin.name}</span> */}
+                        <span style={cityNameArrivalStyle}>{t(destination.name)}</span>
                     </div>
                 </div>
             </Box>
