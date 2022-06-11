@@ -12,7 +12,7 @@ export function NoCookie(props) {
   return (
     <div className="chatBot">
       <img className="cookie" src={cookie} alt="img"/>
-      <p className="cookieText">Ce site n'utilise pas de Cookies</p>
+      <p className="cookieText">Ce site n'utilise pas de Cookies (à moins que...)</p>
       <button className="cookieButton" onClick={handleChange}>
         OK
       </button>
