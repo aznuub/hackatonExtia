@@ -77,6 +77,7 @@ export function DualCityButton(props) {
         <FormControl style={buttonStyle} format={props.format} fullwidth="true">
             <Box format={props.format} style={props.format === "s" ? boxStyleSmall : boxStyle}>
                 <Select
+                    key="originKey"
                     value={""}
                     style={props.format === "s" ? selectStyleSmall : selectStyle}
                     sx={{ m: 1, minWidth: 200 }}
@@ -84,13 +85,13 @@ export function DualCityButton(props) {
                     onClose={() => setOpenRight(false)}
                     onClick={() => setOpenRight(!openRight)}
                 >
-                    {/* {cityNameTab} */}
                     <CityNameTab selector={selectOrigin} />
                 </Select>
-                <div className="elementSelectedLeft" format={props.format} onClick={() => setOpenLeft(!openLeft)}>
+                <div key="originDivKey" className="elementSelected" format={props.format} onClick={() => setOpenRight(!openRight)}>
                     <img src={origin.logo_o} alt="logo" style={props.format === "s" ? logoStyleSmall : logoStyle} />
                     <div className="nameAndCode">
                         <span style={cityNameDepartureStyle}>{t(origin.name)}</span>
+                        {/* <span>{origin.name}</span> */}
                     </div>
                 </div>
 
@@ -98,6 +99,7 @@ export function DualCityButton(props) {
                 <div className="separatorStyle"></div>
 
                 <Select
+                    key="destinationKey"
                     value={""}
                     style={props.format === "s" ? selectStyleSmall : selectStyle}
                     sx={{ m: 1, minWidth: 200 }}
@@ -105,12 +107,14 @@ export function DualCityButton(props) {
                     onClose={() => setOpenLeft(false)}
                     onClick={() => setOpenLeft(!openLeft)}
                 >
+                    {/* {cityNameTab} */}
                     <CityNameTab selector={selectDestination} />
                 </Select>
-                <div className="elementSelectedRight" format={props.format} onClick={() => setOpenRight(!openRight)}>
+                <div key="destinationDivKey" className="elementSelected destinationElement" format={props.format} onClick={() => setOpenLeft(!openLeft)}>
                     <img src={destination.logo_o} alt="logo" style={props.format === "s" ? logoStyleSmall : logoStyle} />
                     <div className="nameAndCode">
                         <span style={cityNameArrivalStyle}>{t(destination.name)}</span>
+                        {/* <span style={cityNameDepartureStyle}>{destination.name}</span> */}
                     </div>
                 </div>
             </Box>

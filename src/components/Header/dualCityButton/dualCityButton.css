@@ -89,12 +89,12 @@ animate__bounceOutLeft
 }
 
 @media (min-width:768px){
-  .elementSelectedLeft {
+  .elementSelected {
    position:absolute;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   align-items: left;
+   align-items: center;
    padding-left: 30px;
    width: 31%;
    cursor: pointer;
@@ -102,47 +102,18 @@ animate__bounceOutLeft
 }
 
 @media (max-width:768px){
-  .elementSelectedLeft {
+  .elementSelected {
    position:absolute;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   align-items: left;
+   align-items: center;
    padding-left: 10px;
    width: 50%;
    height: 85px;
    cursor: pointer;
   }
 }
-
-@media (min-width:768px){
-  .elementSelectedRight {
-   position:absolute;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: right;
-   padding-left: 300px;
-   width: 31%;
-   cursor: pointer;
-  }
-}
-
-@media (max-width:768px){
-  .elementSelectedRight {
-   position:absolute;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: right;
-   padding-left: 280px;
-   width: 50%;
-   height: 85px;
-   cursor: pointer;
-  }
-}
-
-
 
 @media (min-width:768px){
   .elementArrival{
