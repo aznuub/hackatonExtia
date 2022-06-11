@@ -98,6 +98,7 @@ import barcelone from "../images/city/barcelone.png";
 
 
 import aix_o from "../images/city/orange/aix.png";
+import barcelone_o from "../images/city/orange/barcelone.png";
 import bordeaux_o from "../images/city/orange/bordeaux.png";
 import bruxelles_o from "../images/city/orange/bruxelle.png";
 import bucarest_o from "../images/city/orange/bucarest.png";
@@ -119,98 +120,118 @@ import toulouse_o from "../images/city/orange/toulouse.png";
 import tours_o from "../images/city/orange/tours.png";
 import montréal_o from "../images/city/orange/montreal.png";
 
-export const cityData  = [
-  {name:"Aix-en-Provence",code:"AXP",logo:aix,logo_o:aix_o,restaurantPrice:"60",beerPrice:"6,5",
-     priceFlat:{individual:'760',roomate:'517',family:'1550'},
-     temperature:{ weatherCold: '13', weatherMedium: '290', weatherHot: '62' }
-  },  
-  {name:"Bordeaux",code:"BOD",logo:bordeaux,logo_o:bordeaux_o,restaurantPrice:"50",beerPrice:"6",
-     priceFlat:{individual:'724',roomate:'467',family:'1400'},
-     temperature:{ weatherCold: '14', weatherMedium: '332', weatherHot: '19' }
-  },    
-  {name:"Bruxelles",code:"BRU",logo:bruxelles,logo_o:bruxelles_o,restaurantPrice:"60",beerPrice:"4",
-      priceFlat:{individual:'922',roomate:'537',family:'1610'},
-      temperature:{ weatherCold: '60', weatherMedium: '305', weatherHot: '0' }
-  },  
-  {name:"Bucarest",code:"OTP",logo:bucarest,logo_o:bucarest_o,restaurantPrice:"32",beerPrice:"2",
-      priceFlat:{individual:'445',roomate:'268',family:'803'},
-      temperature:{ weatherCold: '53', weatherMedium: '252', weatherHot: '60' }
-    },  
-  {name:"Grenoble",code:"GRB",logo:grenoble,logo_o:grenoble_o,restaurantPrice:"50",beerPrice:"5,3",
-      priceFlat:{individual:'543',roomate:'339',family:'1018'},
-      temperature:{ weatherCold: '93', weatherMedium: '268', weatherHot: '4' }
-  },  
-  {name:"La Rochelle",code:"LRH",logo:rochelle,logo_o:rochelle_o,restaurantPrice:"55",beerPrice:"4,5",
-      priceFlat:{individual:'650',roomate:'333',family:'1000'},
-      temperature:{ weatherCold: '16', weatherMedium: '347', weatherHot: '2' }
-  },  
-  {name:"Lausanne",code:"QLS",logo:lausanne,logo_o:lausanne_o,restaurantPrice:"107",beerPrice:"7,8",
-      priceFlat:{individual:'1463',roomate:'976',family:'2929'},
-      temperature:{ weatherCold: '83', weatherMedium: '282', weatherHot: '0' }
-  },  
-  {name:"Lille",code:"LIL",logo:lille,logo_o:lille_o,restaurantPrice:"40",beerPrice:"5,75",
-      priceFlat:{individual:'688',roomate:'489',family:'1467'},
-      temperature:{ weatherCold: '51', weatherMedium: '314', weatherHot: '0' }
-  },  
-  {name:"Lisbonne",code:"LIS",logo:lisbonne,logo_o:lisbonne_o,restaurantPrice:"40",beerPrice:"2",
-      priceFlat:{individual:'843',roomate:'550',family:'1651'},
-      temperature:{ weatherCold: '0', weatherMedium: '358', weatherHot: '7' }
-  },  
-  {name:"Lyon",code:"LYO",logo:lyon,logo_o:lyon_o,restaurantPrice:"60",beerPrice:"6,5",
-      priceFlat:{individual:'854',roomate:'533',family:'1600'},
-      temperature:{ weatherCold: '58', weatherMedium: '291', weatherHot: '16' }
-  },  
-  {name:"Montpellier",code:"MTP",logo:montpellier,logo_o:montpellier_o,restaurantPrice:"60",beerPrice:"6",
-      priceFlat:{individual:'647',roomate:'433',family:'1300'},
-      temperature:{ weatherCold: '8', weatherMedium: '328', weatherHot: '29' }
+export const cityData = [
+  {
+    name: "Aix-en-Provence", code: "AXP", logo: aix, logo_o: aix_o, restaurantPrice: "60", beerPrice: "6,5",
+    priceFlat: { individual: '760', roomate: '517', family: '1550' },
+    temperature: { weatherCold: '13', weatherMedium: '290', weatherHot: '62' }
   },
-  {name:"Montréal",code:"YUL",logo:montréal,logo_o:montréal_o,restaurantPrice:"56",beerPrice:"5,3",
-     priceFlat:{individual:'900',roomate:'536',family:'1609'},
-     temperature:{ weatherCold: '128', weatherMedium: '221', weatherHot: '16' }
+  {
+    name: "Barcelone", code: "BCN", logo: barcelone, logo_o: barcelone_o, restaurantPrice: "50", beerPrice: "3",
+    priceFlat: { individual: '927', roomate: '512', family: '1535' },
+    temperature: { weatherCold: '0', weatherMedium: '292', weatherHot: '73' }
   },
-  {name:"Nantes",code:"NTE",logo:nantes,logo_o:nantes_o,restaurantPrice:"50",beerPrice:"5,5",
-      priceFlat:{individual:'557',roomate:'368',family:'1105'},
-      temperature:{ weatherCold: '29', weatherMedium: '329', weatherHot: '7' }
+  {
+    name: "Bordeaux", code: "BOD", logo: bordeaux, logo_o: bordeaux_o, restaurantPrice: "50", beerPrice: "6",
+    priceFlat: { individual: '724', roomate: '467', family: '1400' },
+    temperature: { weatherCold: '14', weatherMedium: '332', weatherHot: '19' }
   },
-  {name:"Niort",code:"NIT",logo:niort,logo_o:niort_o,restaurantPrice:"40",beerPrice:"5",
-      priceFlat:{individual:'450',roomate:'258',family:'775'},
-      temperature:{ weatherCold: '31', weatherMedium: '322', weatherHot: '12' }
-  }, 
-  {name:"Paris",code:"PAR",logo:paris,logo_o:paris_o,restaurantPrice:"60",beerPrice:"6,3",
-     priceFlat:{individual:'1288',roomate:'917',family:'2750'},
-     temperature:{ weatherCold: '36', weatherMedium: '321', weatherHot: '8' }
-  },  
-  {name:"Porto",code:"OPO",logo:porto,logo_o:porto_o,restaurantPrice:"37",beerPrice:"2",
-     priceFlat:{individual:'664',roomate:'385',family:'1156'},
-     temperature:{ weatherCold: '0', weatherMedium: '362', weatherHot: '3' }
-  },  
-  {name:"Rennes",code:"RNS",logo:rennes,logo_o:rennes_o,restaurantPrice:"45",beerPrice:"5,7",
-     priceFlat:{individual:'542',roomate:'307',family:'920'},
-     temperature:{ weatherCold: '37', weatherMedium: '325', weatherHot: '3' }
-  }, 
-  {name:"Strasbourg",code:"SXB",logo:strasbourg,logo_o:strasbourg_o,restaurantPrice:"60",beerPrice:"5",
-     priceFlat:{individual:'641',roomate:'378',family:'1133'},
-     temperature:{ weatherCold: '72', weatherMedium: '288', weatherHot: '5' }
-  }, 
-  {name:"Toulon",code:"TLN",logo:toulon,logo_o:toulon_o,restaurantPrice:"72,5",beerPrice:"4",
-     priceFlat:{individual:'540',roomate:'342',family:'1025'},
-     temperature:{ weatherCold: '0', weatherMedium: '322', weatherHot: '43' }
-  }, 
-  {name:"Toulouse",code:"TLS",logo:toulouse,logo_o:toulouse_o,restaurantPrice:"60",beerPrice:"6",
-     priceFlat:{individual:'655',roomate:'422',family:'1266'},
-     temperature:{ weatherCold: '16', weatherMedium: '322', weatherHot: '27' }
+  {
+    name: "Bruxelles", code: "BRU", logo: bruxelles, logo_o: bruxelles_o, restaurantPrice: "60", beerPrice: "4",
+    priceFlat: { individual: '922', roomate: '537', family: '1610' },
+    temperature: { weatherCold: '60', weatherMedium: '305', weatherHot: '0' }
   },
-  {name:"Tours",code:"TUF",logo:tours,logo_o:tours_o,restaurantPrice:"45",beerPrice:"6",
-     priceFlat:{individual:'475',roomate:'244',family:'733'},
-     temperature:{ weatherCold: '45', weatherMedium: '313', weatherHot: '7' }
-  }
+  {
+    name: "Bucarest", code: "OTP", logo: bucarest, logo_o: bucarest_o, restaurantPrice: "32", beerPrice: "2",
+    priceFlat: { individual: '445', roomate: '268', family: '803' },
+    temperature: { weatherCold: '53', weatherMedium: '252', weatherHot: '60' }
+  },
+  {
+    name: "Grenoble", code: "GRB", logo: grenoble, logo_o: grenoble_o, restaurantPrice: "50", beerPrice: "5,3",
+    priceFlat: { individual: '543', roomate: '339', family: '1018' },
+    temperature: { weatherCold: '93', weatherMedium: '268', weatherHot: '4' }
+  },
+  {
+    name: "La Rochelle", code: "LRH", logo: rochelle, logo_o: rochelle_o, restaurantPrice: "55", beerPrice: "4,5",
+    priceFlat: { individual: '650', roomate: '333', family: '1000' },
+    temperature: { weatherCold: '16', weatherMedium: '347', weatherHot: '2' }
+  },
+  {
+    name: "Lausanne", code: "QLS", logo: lausanne, logo_o: lausanne_o, restaurantPrice: "107", beerPrice: "7,8",
+    priceFlat: { individual: '1463', roomate: '976', family: '2929' },
+    temperature: { weatherCold: '83', weatherMedium: '282', weatherHot: '0' }
+  },
+  {
+    name: "Lille", code: "LIL", logo: lille, logo_o: lille_o, restaurantPrice: "40", beerPrice: "5,75",
+    priceFlat: { individual: '688', roomate: '489', family: '1467' },
+    temperature: { weatherCold: '51', weatherMedium: '314', weatherHot: '0' }
+  },
+  {
+    name: "Lisbonne", code: "LIS", logo: lisbonne, logo_o: lisbonne_o, restaurantPrice: "40", beerPrice: "2",
+    priceFlat: { individual: '843', roomate: '550', family: '1651' },
+    temperature: { weatherCold: '0', weatherMedium: '358', weatherHot: '7' }
+  },
+  {
+    name: "Lyon", code: "LYO", logo: lyon, logo_o: lyon_o, restaurantPrice: "60", beerPrice: "6,5",
+    priceFlat: { individual: '854', roomate: '533', family: '1600' },
+    temperature: { weatherCold: '58', weatherMedium: '291', weatherHot: '16' }
+  },
+  {
+    name: "Montpellier", code: "MTP", logo: montpellier, logo_o: montpellier_o, restaurantPrice: "60", beerPrice: "6",
+    priceFlat: { individual: '647', roomate: '433', family: '1300' },
+    temperature: { weatherCold: '8', weatherMedium: '328', weatherHot: '29' }
+  },
+  {
+    name: "Montréal", code: "YUL", logo: montréal, logo_o: montréal_o, restaurantPrice: "56", beerPrice: "5,3",
+    priceFlat: { individual: '900', roomate: '536', family: '1609' },
+    temperature: { weatherCold: '128', weatherMedium: '221', weatherHot: '16' }
+  },
+  {
+    name: "Nantes", code: "NTE", logo: nantes, logo_o: nantes_o, restaurantPrice: "50", beerPrice: "5,5",
+    priceFlat: { individual: '557', roomate: '368', family: '1105' },
+    temperature: { weatherCold: '29', weatherMedium: '329', weatherHot: '7' }
+  },
+  {
+    name: "Niort", code: "NIT", logo: niort, logo_o: niort_o, restaurantPrice: "40", beerPrice: "5",
+    priceFlat: { individual: '450', roomate: '258', family: '775' },
+    temperature: { weatherCold: '31', weatherMedium: '322', weatherHot: '12' }
+  },
+  {
+    name: "Paris", code: "PAR", logo: paris, logo_o: paris_o, restaurantPrice: "60", beerPrice: "6,3",
+    priceFlat: { individual: '1288', roomate: '917', family: '2750' },
+    temperature: { weatherCold: '36', weatherMedium: '321', weatherHot: '8' }
+  },
+  {
+    name: "Porto", code: "OPO", logo: porto, logo_o: porto_o, restaurantPrice: "37", beerPrice: "2",
+    priceFlat: { individual: '664', roomate: '385', family: '1156' },
+    temperature: { weatherCold: '0', weatherMedium: '362', weatherHot: '3' }
+  },
+  {
+    name: "Rennes", code: "RNS", logo: rennes, logo_o: rennes_o, restaurantPrice: "45", beerPrice: "5,7",
+    priceFlat: { individual: '542', roomate: '307', family: '920' },
+    temperature: { weatherCold: '37', weatherMedium: '325', weatherHot: '3' }
+  },
+  {
+    name: "Strasbourg", code: "SXB", logo: strasbourg, logo_o: strasbourg_o, restaurantPrice: "60", beerPrice: "5",
+    priceFlat: { individual: '641', roomate: '378', family: '1133' },
+    temperature: { weatherCold: '72', weatherMedium: '288', weatherHot: '5' }
+  },
+  {
+    name: "Toulon", code: "TLN", logo: toulon, logo_o: toulon_o, restaurantPrice: "72,5", beerPrice: "4",
+    priceFlat: { individual: '540', roomate: '342', family: '1025' },
+    temperature: { weatherCold: '0', weatherMedium: '322', weatherHot: '43' }
+  },
+  {
+    name: "Toulouse", code: "TLS", logo: toulouse, logo_o: toulouse_o, restaurantPrice: "60", beerPrice: "6",
+    priceFlat: { individual: '655', roomate: '422', family: '1266' },
+    temperature: { weatherCold: '16', weatherMedium: '322', weatherHot: '27' }
+  },
+  {
+    name: "Tours", code: "TUF", logo: tours, logo_o: tours_o, restaurantPrice: "45", beerPrice: "6",
+    priceFlat: { individual: '475', roomate: '244', family: '733' },
+    temperature: { weatherCold: '45', weatherMedium: '313', weatherHot: '7' }
+  },
 ];
-
-export const cityArrival ={name:"Barcelone",code:"BCN",logo:barcelone,restaurantPrice:"50",beerPrice:"3",
-      priceFlat:{individual:'927',roomate:'512',family:'1535'},
-      temperature:{ weatherCold: '0', weatherMedium: '292', weatherHot: '73' }
-}
-
 
 export const handleTravel = (arrivedPlace, place) => {
   if (arrivedPlace === place)
