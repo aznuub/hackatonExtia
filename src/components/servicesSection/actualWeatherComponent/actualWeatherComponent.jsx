@@ -197,21 +197,25 @@ export function ActualWeather(props) {
   const [weatherArrival, setWeatherArrival] = useState();
 
   const format = props.format;
+  const city = props.city;
+  const destination = props.destination;
+
+  console.log(destination)
 
   var CardStyle;
   var line;
   var weatherOfTheDayStyle;
 
   useEffect(() => {
-    getWeather(cityArrival.name).then((res) => {
+    getWeather(destination.name).then((res) => {
       setWeatherArrival(res);
       setWeatherPicArrival(getPictoWeather(res.weather[0].main));
     });
-    getWeather(props.city.name).then((res) => {
+    getWeather(city.name).then((res) => {
       setItems(res);
       setWeatherPic(getPictoWeather(res.weather[0].main));
     });
-  }, [props.city]);
+  }, [props.city, props.destination]);
 
   switch (format) {
     case "s":
@@ -304,9 +308,9 @@ export function ActualWeather(props) {
     <div style={CardStyle}>
       <span className="weatherTitle">{t("weather of the day")}</span>
       <div style={weatherOfTheDayStyle}>
-        <WeatherComponent city={t(`${props.city.name}`)} src={weatherPic} items={items} format={props.format} />
+        <WeatherComponent city={t(`${city.name}`)} src={weatherPic} items={items} format={props.format} />
         <div style={line} />
-        <WeatherComponent city={t(cityArrival.name)} src={weatherPicArrival} items={weatherArrival} format={props.format} />
+        <WeatherComponent city={t(`${destination.name}`)} src={weatherPicArrival} items={weatherArrival} format={props.format} />
       </div>
     </div>
   );
