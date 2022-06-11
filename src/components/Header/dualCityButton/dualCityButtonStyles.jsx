@@ -67,7 +67,8 @@ const cityNameDepartureStyle = {
 
 const cityNameArrivalStyle = {
     fontSize: "100%",
-    color: "#FC1235",
+    color: "#283D47",
+/*    color: "#FC1235", */
     margin: "auto",
 };
 

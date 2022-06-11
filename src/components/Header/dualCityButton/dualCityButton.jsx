@@ -115,7 +115,7 @@ export function DualCityButton(props) {
                     <CityNameTab selector={selectDestination} />
                 </Select>
                 <div key="destinationDivKey" className="elementSelected destinationElement" format={props.format} onClick={() => setOpenLeft(!openLeft)}>
-                    <img src={destination.logo_o} alt="logo" style={props.format === "s" ? logoStyleSmall : logoStyle} />
+                    <img src={destination.logo} alt="logo" style={props.format === "s" ? logoStyleSmall : logoStyle} />
                     <div className="nameAndCode">
                         <span style={cityNameArrivalStyle}>{t(destination.name)}</span>
                         {/* <span style={cityNameDepartureStyle}>{destination.name}</span> */}
