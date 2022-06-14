@@ -8,7 +8,6 @@ import sunny from "../../../images/carousel/sunny.png";
 import sunActive from "../../../images/carousel/sunButton.png";
 import snowActive from "../../../images/carousel/snowButton.png";
 import cloudActive from "../../../images/carousel/cloudButton.png";
-import sagradaPicto from "../../../images/city/sagrada.png";
 
 import "./weatherCarousel.css";
 

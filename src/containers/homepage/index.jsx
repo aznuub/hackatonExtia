@@ -6,7 +6,6 @@ import { Link } from "react-scroll";
 import { cityData } from "./../../data/cityName";
 import thinking from "../../images/v2/Header/Navbar/thinking.png";
 import arriving from "../../images/v2/Header/Navbar/box.png";
-import here from "../../images/v2/Header/Navbar/sagrada_white.png";
 import travaux from "../../images/travaux.png";
 import { StickyHeader } from "../../components/stickyHeader/stickyHeader";
 import "./index.css";

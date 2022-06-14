@@ -1,7 +1,7 @@
 import { Scroller } from "../../components/Header/scroller/scroller";
 import { DualCityButton } from "../../components/Header/dualCityButton/dualCityButton";
 import { Carousel } from "../../components/Header/carousel/carousel";
-import { GoDownArrow } from "../../components/Header/goDownArrow/goDownArrow"
+import { GoDownArrow } from "../../components/Header/goDownArrow/goDownArrow";
 import { NoCookie } from "../../components/Header/autoSlide/autoSlide";
 import { t } from "i18next";
 
