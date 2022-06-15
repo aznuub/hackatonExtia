@@ -212,7 +212,7 @@ export function ActualWeather(props) {
       setItems(res);
       setWeatherPic(getPictoWeather(res.weather[0].main));
     });
-  }, [props.city, props.destination]);
+  }, [props.city, props.destination, destination.name, city.name]);
 
   switch (format) {
     case "s":

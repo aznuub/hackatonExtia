@@ -107,7 +107,7 @@ export function ServicesSection(props) {
           <WeatherCarousel key="weatherCarousel" city={city} destination={props.destination} format={props.format} />
         </div>
         <div style={mapAndTravelStyle} key="travelTimeBlock">
-          <TravelTimeComponent format={props.format} />
+          <TravelTimeComponent format={props.format} destination={props.destination} />
         </div>
       </div>
       <div style={lifeCostStyle}>

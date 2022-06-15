@@ -167,7 +167,7 @@ export function TravelTimeComponent(props) {
   }, [place, arrivedPlace]);
   return (
     <>
-      <MapBox map={mapShow} place={place} arrivedPlace={arrivedPlace} format={props.format} />
+      <MapBox map={mapShow} place={place} arrivedPlace={arrivedPlace} destination={props.destination} format={props.format} />
       <div className="selectCard">
         <div className="startTravel">
           <Select style={styles.selectStyle} value={place} onChange={handleChange}>
