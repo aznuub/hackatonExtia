@@ -10,11 +10,15 @@ const mapBoxToken = process.env.REACT_APP_MAPBOX_TOKEN;
 mapboxgl.accessToken = mapBoxToken;
 
 export function MapBox(props) {
+  const destination = props.destination;
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(2.200551);
-  const [lat, setLat] = useState(41.369955);
+  const [lat, setLat] = useState(destination.gpsPosition.lat);
+  const [lng, setLng] = useState(destination.gpsPosition.lon);
   const [zoom, setZoom] = useState(11);
+  const [isLoaded, setLoaded] = useState(false);
+  const [arePointsGathered, setPointsGathered] = useState(false);
+
   const [geoJson, setGeoJson] = useState([]);
 
   function centerMap(features = null) {
@@ -39,28 +43,38 @@ export function MapBox(props) {
   }
 
   useEffect(() => {
-    if (!map.current) return;
-    map.current.flyTo({
-      center: [
-        lng, 
-        lat
-      ]
-    });
-  }, [props.format]);
+    setLat(destination.gpsPosition.lat);
+    setLng(destination.gpsPosition.lon);
+    setLoaded(false);
+    setPointsGathered(false);
+  }, [destination.gpsPosition.lat, destination.gpsPosition.lon]);
 
   useEffect(() => {
-    if (map.current) return; // initialize map only once
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mbenkraouda/cl0hwunol001u15p1erz8bof3',
+    if (!map.current || isLoaded) return;
+    map.current.flyTo({
       center: [lng, lat],
-      zoom: zoom,
-      maxZoom: 15,
-      interactive: false
     });
+    setLoaded(true);
+  }, [props.format, lng, lat]);
 
-    fetch("https://api.mapbox.com/datasets/v1/mbenkraouda/cl0hx3lzx3lfu21ui82e6675b/features?access_token=pk.eyJ1IjoibWJlbmtyYW91ZGEiLCJhIjoiY2wwaHdubzgxMGIwaTNqcDU5eWZhZHJzaSJ9.ls1fn4Kged2itpsSrK_aOA")
-      .then(async (res) => {
+  useEffect(() => {
+    if (!map.current) {
+      // initialize map only once
+      map.current = new mapboxgl.Map({
+        container: mapContainer.current,
+        style: "mapbox://styles/mbenkraouda/cl0hwunol001u15p1erz8bof3",
+        center: [lng, lat],
+        zoom: zoom,
+        maxZoom: 15,
+        interactive: true,
+      });
+    }
+
+    if (arePointsGathered) return;
+    setPointsGathered(true);
+    fetch(
+      `https://api.mapbox.com/datasets/v1/mbenkraouda/cl0hx3lzx3lfu21ui82e6675b/features?access_token=pk.eyJ1IjoibWJlbmtyYW91ZGEiLCJhIjoiY2wwaHdubzgxMGIwaTNqcDU5eWZhZHJzaSJ9.ls1fn4Kged2itpsSrK_aOA`
+    ).then(async (res) => {
         if (res.ok) {
           var json = await res.json();
           if (json.features) {
@@ -87,8 +101,8 @@ export function MapBox(props) {
   useEffect(() => {
     if (!map.current) return; // wait for map to initialize
     map.current.on('move', () => {
-      setLng(map.current.getCenter().lng);
-      setLat(map.current.getCenter().lat);
+      setLng(destination.gpsPosition.lon);
+      setLat(destination.gpsPosition.lat);
       setZoom(map.current.getZoom());
     });
   });
