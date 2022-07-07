@@ -14,7 +14,7 @@ import "./actualWeatherComponent.css";
 const getWeather = async (city) => {
   const apiKey = process.env.REACT_APP_API_KEY;
   const apiPath = `${process.env.REACT_APP_API_PATH}${city}&appid=${apiKey}`;
-  const api_call = await fetch(apiPath).then((response) => response.json());
+  const api_call = await fetch(apiPath).then((response) => response.json()).catch((err) => { console.log("No weather ? just wear pants : ", err)});
   return api_call;
 };
 

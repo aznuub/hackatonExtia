@@ -95,6 +95,8 @@ export function MapBox(props) {
           map.current.resize();
           centerMap(json.features);
         }
+      }).catch(async (err) => {
+        console.log("It's allright : ", err)
       });
   });
 

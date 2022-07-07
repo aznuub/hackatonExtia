@@ -16,14 +16,11 @@ export function ServicesSection(props) {
     paddingTop: "24px",
   };
   var backgroundStyle = {
-    backgroundColor: "#FC9254",
     position: "relative",
-    width: "100%",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    padding: "10px",
   }
 
   var mapAndTravelStyle = {

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { SocialMedia } from "../../components/footer/socialMedia/socialMedia";
 import { ServicesSection } from "./servicesSection";
+import { SettlementSection } from "./settlementSection";
+import { SettleSection } from "../../components/SettleSection/settleSection";
 import { Header } from "./header";
 import { Link } from "react-scroll";
 import { cityData } from "./../../data/cityName";
@@ -9,6 +11,7 @@ import arriving from "../../images/v2/Header/Navbar/box.png";
 import travaux from "../../images/travaux.png";
 import { StickyHeader } from "../../components/stickyHeader/stickyHeader";
 import "./index.css";
+import { height } from "@mui/system";
 
 // const PageContainer = styled.div`
 //   min-width: 100%;
@@ -27,20 +30,45 @@ import "./index.css";
 //   background: "#FCCB56",
 // };
 
-const blue = {
-  maxWidth: "100vw",
-  maxHeight: "100%",
-  background: "white",
-  padding: "3% 2% 60px",
-};
+const orange = "#fc9254"
+const yellow = "#fccb56"
+const blue = "#56c3c3"
+const green = "#8dbc6a"
+const red = "#FC6C54"
 
-// const red = {
-//   minHeight: "51vw",
-//   minWidth: "100%",
-//   paddingTop: "1vw",
-//   paddingBottom: "8vw",
-//   background: "#FC6C54",
-// };
+const mainBox = (color) => {
+  return {  
+    maxWidth: "100vw",
+    height: "600px",
+    background: color,
+    padding: "24px 3% 24px 12%",
+    display: "flex",
+  }
+}
+
+const part2panelLeft = {
+  width: "40%",
+  height: "100%",
+  border: "solid 5px red",
+  margin: "auto",
+}
+
+const part2panelRight = {
+  width: "60%",
+  height: "100%",
+  border: "solid 5px blue",
+  margin: "auto",
+}
+
+const triplePack = {
+  display: "flex"
+}
+
+const triplePackElem = {
+  border: "solid 2px black",
+  margin: "auto",
+  height: "100px"
+}
 
 // const text = {
 //   verticalAlign: "middle",
@@ -163,17 +191,32 @@ function Homepage(props) {
           destinationChange={destinationChange}
           originChange={originChange}
           lngChange={props.lngChange} format={props.format} orientation={props.orientation} />
-        <ServicesSection name="weather" city={city} destination={destination} format={props.format} />
-        <div id="part2" style={blue}>
-          <div className="travauxContainer">
+        <div id="part1" style={mainBox(yellow)}>
+          {/* <ServicesSection city={city} destination={destination} format={props.format} /> */}
+        </div>
+        <div id="part2" style={mainBox(blue)}>
+          <div id="sidePanelLeft" style={part2panelLeft}>
+            <div id="triplePack" style={triplePack}>
+              <div id="pack" style={triplePackElem}>TripleOne</div>
+              <div id="pack" style={triplePackElem}>TripleTwo</div>
+              <div id="pack" style={triplePackElem}>TripleThree</div>
+            </div>
+          </div>
+          <div id="sidePanelRight" style={part2panelRight}>
+            Right Column
+          </div>
+        </div>
+        <div id="part3" style={mainBox(green)}>
+        <div className="travauxContainer">
             <img src={travaux} className="travaux" alt="none"/>
             <p className="travauxTxt">
-              Cette partie du site est en cours de construction
+              Cette partie du site est en cours de restructuration colorationelle.
               <br />
-              Revenez plus tard !
+              Revenez quand j'ai envie, donc pas maintenant
             </p>
           </div>
         </div>
+        {/* <SettlementSection name="settle" format={props.format} orientation={props.orientation} /> */}
         <SocialMedia lng={props.lng} />
       {/* </PageContainer> */}
     </>
