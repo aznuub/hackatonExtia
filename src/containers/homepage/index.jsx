@@ -11,6 +11,7 @@ import arriving from "../../images/v2/Header/Navbar/box.png";
 import travaux from "../../images/travaux.png";
 import { StickyHeader } from "../../components/stickyHeader/stickyHeader";
 import "./index.css";
+import { keyframes} from "styled-components";
 import { height } from "@mui/system";
 
 // const PageContainer = styled.div`
@@ -36,13 +37,15 @@ const blue = "#56c3c3"
 const green = "#8dbc6a"
 const red = "#FC6C54"
 
-const mainBox = (color) => {
+const mainBox = (color, size=600) => {
   return {  
     maxWidth: "100vw",
-    height: "600px",
+    height: `${size}px`,
     background: color,
     padding: "24px 3% 24px 12%",
     display: "flex",
+    'border-radius': "25px",
+    overflow: 'auto'
   }
 }
 
@@ -50,51 +53,134 @@ const part2panelLeft = {
   width: "40%",
   height: "100%",
   border: "solid 5px red",
+  'border-radius': "15px",
   margin: "auto",
 }
 
 const part2panelRight = {
+  display: "flex",
+  alignItems: "center",
   width: "60%",
   height: "100%",
   border: "solid 5px blue",
+  'border-radius': "15px",
   margin: "auto",
 }
 
 const triplePack = {
-  display: "flex"
+  display: "flex",
+  'flex-wrap': 'wrap',
+  height: "30%",
 }
 
 const triplePackElem = {
   border: "solid 2px black",
   margin: "auto",
-  height: "100px"
+  height: "60px",
+  'min-width': 0,
 }
 
-// const text = {
-//   verticalAlign: "middle",
-//   textAlign: "center",
-//   position: "relative",
-//   paddingTop: "5vw",
-//   marginBottom: "-5vw",
-//   fontFamily: "'Nunito', sans-serif",
-//   fontSize: "30px",
-// };
+const doubleColListMain = {
+  border: "solid green 5px",
+  height: "30%"
+}
 
-// const textSmall = {
-//   verticalAlign: "middle",
-//   textAlign: "center",
-//   position: "relative",
-//   paddingTop: "5vw",
-//   marginBottom: "-2vw",
-//   fontFamily: "'Nunito', sans-serif",
-//   fontSize: "18px",
-// };
+const doubleColListSecondary = {
+  border: "solid orange 5px",
+  height: "40%"
+}
 
-// const imgStyle = {
-//   width: "100%",
-//   display: "block",
-//   margin: "auto",
-// };
+const doubleColListTitle = {
+  width: "75%",
+  border: "solid 1px red",
+  padding: '5px 2px 2px 5px',
+  'font-size': "18px",
+  'font-weight': "bold",
+  'border-radius': '5px'
+}
+
+const doubleColList = {
+  display: "flex",
+  'flex-wrap': "wrap",
+  width: "100%",
+}
+
+const doubleColListElem = {
+  display: "flex",
+  width: "50%",
+  border: "solid 2px blue"
+}
+
+const doubleColListElemIcon = {
+  width: "20%",
+  border: "solid 1px purple"
+}
+
+const doubleColListElemText = {
+  width: "80%",
+  border: "solid 1px cyan",
+  padding: "2px",
+  'font-size': "13px",
+  'font-weight': "bold"
+}
+
+const part3PanelLeft = {
+  width: "50%",
+  height: "100%",
+  border: "solid 5px blue",
+  'border-radius': "35px",
+  margin: "auto",
+}
+
+const part3PanelRight = {
+  width: "50%",
+  height: "100%",
+  border: "solid 5px red",
+  'border-radius': "15px",
+  margin: "auto",
+}
+
+const part3PanelLeftLogo = {
+  padding: "20px",
+  height: "30%",
+  'text-align': "center"
+}
+
+const part3PanelLeftLogoImage = {
+  height: "100%",
+  'border-radius': "12px"
+}
+
+const part3PanelLeftTubes = {
+  display: "flex",
+  'flex-direction': "column",
+  height: "70%",
+  padding: "0px 25px 0px 25px"
+}
+
+const tubeSize = 50;
+
+const part3PanelLeftTubeElem = {
+  width: "100%",
+  height: `${tubeSize}px`,
+  'text-align': "center",
+  padding: "5px 12px 12px 5px",
+  'margin-bottom': `${tubeSize*0.3}px`,
+  border: "solid 3px yellow",
+  'border-radius': "25px",
+  'font-weight': "bold"
+}
+
+const part3PanelRightUpper = {
+  height: "70%",
+  border: "solid 4px orange",
+}
+
+const part3PanelRightLower = {
+  height: "30%",
+  border: "solid 4px purple"
+}
+
 
 function Homepage(props) {
   // eslint-disable-next-line no-unused-vars
@@ -191,29 +277,111 @@ function Homepage(props) {
           destinationChange={destinationChange}
           originChange={originChange}
           lngChange={props.lngChange} format={props.format} orientation={props.orientation} />
-        <div id="part1" style={mainBox(yellow)}>
-          {/* <ServicesSection city={city} destination={destination} format={props.format} /> */}
+        <div id="part1" style={mainBox(yellow, 1400)}>
+          <ServicesSection city={city} destination={destination} format={props.format} />
         </div>
-        <div id="part2" style={mainBox(blue)}>
+        <div id="part2" style={mainBox(blue, 800)}>
           <div id="sidePanelLeft" style={part2panelLeft}>
             <div id="triplePack" style={triplePack}>
               <div id="pack" style={triplePackElem}>TripleOne</div>
               <div id="pack" style={triplePackElem}>TripleTwo</div>
               <div id="pack" style={triplePackElem}>TripleThree</div>
             </div>
+            <div id="doubleColListMain" style={doubleColListMain}>
+              <div id="doubleColTitle" style={doubleColListTitle}>Nothing to see here</div>
+              <div id="doubleColList" style={doubleColList}>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/aix.png?raw=true" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Aix en provence</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/barcelone.png?raw=true" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Barcelone</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bordeaux.png?raw=true" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bordeaux</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bruxelle.png?raw=true" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+              </div>
+            </div>
+            <div id="doubleColListSecondary" style={doubleColListSecondary}>
+              <div id="doubleColTitle" style={doubleColListTitle}>Nothing here either</div>
+              <div id="doubleColList" style={doubleColList}>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\aix.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Aix en provence</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\barcelone.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Barcelone</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bordeaux.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bordeaux</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+                <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div id="sidePanelRight" style={part2panelRight}>
-            Right Column
+            <img style={{width: "100%"}} src="https://c.tenor.com/ve60xH3hKrcAAAAC/no.gif" alt="nope" />
           </div>
         </div>
-        <div id="part3" style={mainBox(green)}>
-        <div className="travauxContainer">
-            <img src={travaux} className="travaux" alt="none"/>
-            <p className="travauxTxt">
-              Cette partie du site est en cours de restructuration colorationelle.
-              <br />
-              Revenez quand j'ai envie, donc pas maintenant
-            </p>
+        <div id="part3" style={mainBox(green, 800)}>
+          <div id="part3PanelLeft" style={part3PanelLeft}>
+            <div id="part3PanelLeftLogo" style={part3PanelLeftLogo}>
+              <img style={part3PanelLeftLogoImage} src="https://phantom-marca.unidadeditorial.es/a12ae8bfd4cbe2bbec80cc9c70ea6301/resize/1320/f/jpg/assets/multimedia/imagenes/2022/05/26/16535796722201.jpg"></img>
+            </div>
+            <div id="part3PanelLeftTubes" style={part3PanelLeftTubes}>
+              <div id="part3PanelLeftTubeElem1" style={part3PanelLeftTubeElem}> Hello there</div>
+              <div id="part3PanelLeftTubeElem2" style={part3PanelLeftTubeElem}> General Kenobi</div>
+              <div id="part3PanelLeftTubeElem3" style={part3PanelLeftTubeElem}> You are a bold one</div>
+              <div id="part3PanelLeftTubeElem4" style={part3PanelLeftTubeElem}> Not a prequel Quote</div>
+              <div id="part3PanelLeftTubeElem3" style={part3PanelLeftTubeElem}> You are a bold one</div>
+            </div>
+          </div>
+          <div id="part3PanelRight" style={part3PanelRight}>
+            <div id="part3PanelRightUpper" style={part3PanelRightUpper}></div>
+            <div id="part3PanelRightLower" style={part3PanelRightLower}></div>
           </div>
         </div>
         {/* <SettlementSection name="settle" format={props.format} orientation={props.orientation} /> */}
