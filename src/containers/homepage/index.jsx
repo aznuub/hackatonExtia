@@ -12,7 +12,7 @@ import travaux from "../../images/travaux.png";
 import { StickyHeader } from "../../components/stickyHeader/stickyHeader";
 import "./index.css";
 import { keyframes} from "styled-components";
-import { height } from "@mui/system";
+import { borderRadius, height } from "@mui/system";
 
 // const PageContainer = styled.div`
 //   min-width: 100%;
@@ -52,7 +52,6 @@ const mainBox = (color, size=600) => {
 const part2panelLeft = {
   width: "40%",
   height: "100%",
-  border: "solid 5px red",
   'border-radius': "15px",
   margin: "auto",
 }
@@ -62,7 +61,6 @@ const part2panelRight = {
   alignItems: "center",
   width: "60%",
   height: "100%",
-  border: "solid 5px blue",
   'border-radius': "15px",
   margin: "auto",
 }
@@ -74,25 +72,27 @@ const triplePack = {
 }
 
 const triplePackElem = {
-  border: "solid 2px black",
+  border: `solid 4px ${green}`,
   margin: "auto",
   height: "60px",
   'min-width': 0,
 }
 
 const doubleColListMain = {
-  border: "solid green 5px",
-  height: "30%"
+  height: "30%",
+  border: `solid 4px ${yellow}`,
+  borderRadius: "15px"
 }
 
 const doubleColListSecondary = {
-  border: "solid orange 5px",
-  height: "40%"
+  height: "40%",
+  border: `solid 4px ${red}`,
+  borderRadius: "15px"
 }
 
 const doubleColListTitle = {
-  width: "75%",
-  border: "solid 1px red",
+  width: "100%",
+  textAlign: "center",
   padding: '5px 2px 2px 5px',
   'font-size': "18px",
   'font-weight': "bold",
@@ -101,6 +101,8 @@ const doubleColListTitle = {
 
 const doubleColList = {
   display: "flex",
+  padding: "15px",
+  overflow: "hidden",
   'flex-wrap': "wrap",
   width: "100%",
 }
@@ -108,17 +110,16 @@ const doubleColList = {
 const doubleColListElem = {
   display: "flex",
   width: "50%",
-  border: "solid 2px blue"
 }
 
 const doubleColListElemIcon = {
   width: "20%",
-  border: "solid 1px purple"
 }
 
 const doubleColListElemText = {
+  display: "flex",
+  alignItems: "center",
   width: "80%",
-  border: "solid 1px cyan",
   padding: "2px",
   'font-size': "13px",
   'font-weight': "bold"
@@ -127,7 +128,6 @@ const doubleColListElemText = {
 const part3PanelLeft = {
   width: "50%",
   height: "100%",
-  border: "solid 5px blue",
   'border-radius': "35px",
   margin: "auto",
 }
@@ -135,7 +135,6 @@ const part3PanelLeft = {
 const part3PanelRight = {
   width: "50%",
   height: "100%",
-  border: "solid 5px red",
   'border-radius': "15px",
   margin: "auto",
 }
@@ -163,22 +162,20 @@ const tubeSize = 50;
 const part3PanelLeftTubeElem = {
   width: "100%",
   height: `${tubeSize}px`,
+  border: `solid 3px ${red}`,
   'text-align': "center",
   padding: "5px 12px 12px 5px",
   'margin-bottom': `${tubeSize*0.3}px`,
-  border: "solid 3px yellow",
   'border-radius': "25px",
   'font-weight': "bold"
 }
 
 const part3PanelRightUpper = {
   height: "70%",
-  border: "solid 4px orange",
 }
 
 const part3PanelRightLower = {
   height: "30%",
-  border: "solid 4px purple"
 }
 
 
@@ -312,53 +309,53 @@ function Homepage(props) {
               <div id="doubleColTitle" style={doubleColListTitle}>Nothing here either</div>
               <div id="doubleColList" style={doubleColList}>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\aix.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/aix.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Aix en provence</div>
                 </div>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\barcelone.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/barcelone.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Barcelone</div>
                 </div>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bordeaux.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bordeaux.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Bordeaux</div>
                 </div>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bruxelle.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
                 </div>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bruxelle.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
                 </div>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bruxelle.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
                 </div>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bruxelle.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
                 </div>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bruxelle.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
                 </div>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bruxelle.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
                 </div>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bruxelle.png?raw=true" />
+                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
+                </div>
+                {/* <div id="doubleColListElem" style={doubleColListElem}>
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bruxelle.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
                 </div>
                 <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
+                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="https://github.com/aznuub/hackatonExtia/blob/main/src/images/city/bruxelle.png?raw=true" />
                   <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
-                </div>
-                <div id="doubleColListElem" style={doubleColListElem}>
-                  <img id="doubleColListElemIcon1" style={doubleColListElemIcon} src="src\extia\src\images\city\bruxelle.png" />
-                  <div id="doubleColListElemText1" style={doubleColListElemText}>Bruxelles</div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
