@@ -35,7 +35,6 @@ const circleStyleM = {
   zIndex: -1,
 };
 
-
 const circleStyleS = {
   position: "absolute",
   backgroundColor: "rgb(255, 233, 221)",
@@ -61,7 +60,6 @@ const circleStyleLandscape = {
   overflow: "hidden",
   zIndex: "0",
 };
-
 
 const titleStyle = {
   textAlign: "left",
@@ -100,7 +98,6 @@ const titleBcnStyleMedium = {
   color: "#FC9254",
 };
 
-
 const titleBcnStyleSmall = {
   color: "#FC9254",
   fontWeight: "normal",
@@ -112,8 +109,7 @@ const titleBcnStyleSmall = {
 };
 
 export function Header(props) {
-  var elemStyle = {
-  };
+  var elemStyle = {};
 
   var titleAndCityButtonContainer = {
     position: "absolute",
@@ -121,7 +117,7 @@ export function Header(props) {
     flexDirection: "column",
     alignItems: "center",
     left: "calc(8vw + 100px)",
-    top: "25%"
+    top: "25%",
   };
 
   if (props.format === "m") {
@@ -136,8 +132,7 @@ export function Header(props) {
       elemStyle.height = "unset";
       titleAndCityButtonContainer.position = "static";
       titleAndCityButtonContainer.paddingBottom = "32px";
-    }
-    else {
+    } else {
       titleAndCityButtonContainer.left = "50%";
       titleAndCityButtonContainer.top = "8%";
       titleAndCityButtonContainer.transform = "translateX(-50%)";
@@ -146,54 +141,89 @@ export function Header(props) {
 
   return (
     <>
-      <div className="elemStyle" style={elemStyle} name="Header" format={props.format}>
-        <div style={props.format === "s" ? props.orientation === "portrait" ? circleStyleS : circleStyleLandscape : props.format === "m" ? circleStyleM : circleStyle} />
+      <div
+        className="elemStyle"
+        style={elemStyle}
+        name="Header"
+        format={props.format}
+      >
+        <div
+          style={
+            props.format === "s"
+              ? props.orientation === "portrait"
+                ? circleStyleS
+                : circleStyleLandscape
+              : props.format === "m"
+              ? circleStyleM
+              : circleStyle
+          }
+        />
         <div>
           <div style={titleAndCityButtonContainer}>
             <div className="titleFont">
-              <span style={props.format === "s" ? titleStyleSmall : props.format === "m" ? titleStyleMedium : titleStyle}>{props.format === "s" ? t("welcome") : t("Welcome to extia")}</span>
+              <span
+                style={
+                  props.format === "s"
+                    ? titleStyleSmall
+                    : props.format === "m"
+                    ? titleStyleMedium
+                    : titleStyle
+                }
+              >
+                {props.format === "s" ? t("welcome") : t("Welcome to extia")}
+              </span>
               <div className="extiaBarcelona">
-                {props.format === "l" && (
-                  <span style={titleStyle}>Extia</span>
-                )}
+                {props.format === "l" && <span style={titleStyle}>Extia</span>}
                 {props.format === "m" && (
                   <span style={titleStyleMedium}>Extia</span>
                 )}
                 {props.format === "s" && (
                   <span style={titleStyleSmall}>{t("to extia")}</span>
                 )}
-                {props.format !== "s" && (
-                  <span>{' '}</span>
-                )}
-                <span style={props.format === "s" ? titleBcnStyleSmall : props.format === "m" ? titleBcnStyleMedium : titleBcnStyle} className="bcnFont">
+                {props.format !== "s" && <span> </span>}
+                <span
+                  style={
+                    props.format === "s"
+                      ? titleBcnStyleSmall
+                      : props.format === "m"
+                      ? titleBcnStyleMedium
+                      : titleBcnStyle
+                  }
+                  className="bcnFont"
+                >
                   {t(props.destination.name)} !
                 </span>
               </div>
             </div>
             {/* <CityButton onChange={props.onChange} city={props.city} format={props.format} /> */}
             <DualCityButton
-              onChange={props.onChange} 
+              onChange={props.onChange}
               city={props.city}
               destinationChange={props.destinationChange}
               destination={props.destination}
               originChange={props.originChange}
               origin={props.origin}
-              format={props.format} 
+              format={props.format}
             />
           </div>
           {props.format !== "s" && (
             <>
               {props.format === "l" && <Carousel format={props.format} />}
-              <Scroller destination={props.destination} origin={props.origin}/>
+              <Scroller destination={props.destination} origin={props.origin} />
             </>
           )}
-          {props.format !== "s" && (<>
-            <NoCookie />
-          </>
+          {props.format !== "s" && (
+            <>
+              <NoCookie />
+            </>
           )}
         </div>
       </div>
-      {props.format !== "m" && (props.format === "s" && props.orientation === "portrait") && <GoDownArrow format={props.format} />}
+      {props.format !== "m" &&
+        props.format === "s" &&
+        props.orientation === "portrait" && (
+          <GoDownArrow format={props.format} />
+        )}
     </>
   );
 }

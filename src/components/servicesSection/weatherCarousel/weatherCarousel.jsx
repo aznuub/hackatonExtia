@@ -12,7 +12,6 @@ import cloudActive from "../../../images/carousel/cloudButton.png";
 import "./weatherCarousel.css";
 
 function WeatherComponent(props) {
-
   const city = props.city;
   const destination = props.destination;
   const mainCity = destination.code;
@@ -45,14 +44,22 @@ function WeatherComponent(props) {
         padding: "12px",
       };
       break;
-      default:
-        break;
+    default:
+      break;
   }
   return (
     <div style={secondBox}>
       <div className="cityBox">
         <img className="pictoCity" src={city.logo} alt="city" />
-        <div style={{ display: "flex", width: "55%", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            width: "55%",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <span className="align">{city.code}</span>
           <div className="align2">
             <span>
@@ -69,7 +76,15 @@ function WeatherComponent(props) {
       <span className="weatherText">{props.weather}</span>
       <div className="cityBox2">
         <img className="pictoCity" src={destination.logo} alt="mainCity" />
-        <div style={{ display: "flex", width: "55%", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            width: "55%",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <span className="align">{mainCity}</span>
           <div className="align2">
             <span>{mainCityDays[props.weatherValue]}</span>
@@ -117,8 +132,8 @@ const WeatherCarousel = (props) => {
         paddingTop: "3%",
       };
       break;
-      default:
-        break;
+    default:
+      break;
   }
 
   const onChange = (newValue) => {
@@ -154,21 +169,35 @@ const WeatherCarousel = (props) => {
   };
   return (
     <div style={boxStyle}>
-      <span className="comparisonTitle">{t("weather comparison")}<sup style={{all: "initial", verticalAlign: "super"}}>*</sup></span>
+      <span className="comparisonTitle">
+        {t("weather comparison")}
+        <sup style={{ all: "initial", verticalAlign: "super" }}>*</sup>
+      </span>
       <WeatherComponent
         format={props.format}
         city={props.city}
         destination={props.destination}
         img={img}
-        weather={weather === 2 ? t("weather>25") : weather === 1 ? t("weather5-25") : t("weather<5")}
+        weather={
+          weather === 2
+            ? t("weather>25")
+            : weather === 1
+            ? t("weather5-25")
+            : t("weather<5")
+        }
         mainCityDay={cityDay + t("days/year")}
         weatherValue={value}
       />
       <div>
-        <Dots className="dots" value={value} onChange={onChange} thumbnails={dots} />
+        <Dots
+          className="dots"
+          value={value}
+          onChange={onChange}
+          thumbnails={dots}
+        />
       </div>
     </div>
   );
-};  
+};
 
 export default WeatherCarousel;
